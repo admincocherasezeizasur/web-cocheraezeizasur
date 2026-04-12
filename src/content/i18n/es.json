@@ -1,0 +1,368 @@
+{
+  "nav": {
+    "inicio": "INICIO",
+    "servicios": "SERVICIOS",
+    "tarifas": "TARIFAS",
+    "ubicacion": "UBICACIÓN",
+    "contacto": "CONTACTO",
+    "contacto_whatsappMessage": "Hola! Me contacto desde su página web, quiero más información."
+  },
+  "hero": {
+    "title_line1": "Tu auto",
+    "title_highlight": "seguro",
+    "title_line2": ", tu viaje tranquilo.",
+    "subtitle": "Cocheras 100% techadas situadas estratégicamente a minutos de Ezeiza. Máxima seguridad para tu vehículo mientras disfrutás de tu destino.",
+    "feature1_title": "CANCELACIÓN\nFLEXIBLE, SIN COSTO\nADICIONAL.",
+    "feature2_title": "TIEMPOS DE\nESPERAS\nFLEXIBLES.",
+    "feature3_title": "VIGILANCIA 24HS.",
+    "cta_quote": "COTIZÁ TU ESTADÍA",
+    "form_fecha_ingreso": "FECHA INGRESO",
+    "form_fecha_egreso": "FECHA EGRESO",
+    "form_nota_hora": "* Importante: La hora informada debe ser la hora de salida de su vuelo. Horarios se contabilizan desde el horario de ingreso en bloques de 24hs.",
+    "form_aeropuerto_label": "¿AEROPUERTO DE SALIDA Y REGRESO?",
+    "form_aeropuerto_ezeiza": "EZEIZA",
+    "form_aeropuerto_aeroparque": "AEROPARQUE",
+    "form_aeropuerto_eze_aep": "EZE → AEP (Valet Combinado)",
+    "form_aeropuerto_aep_eze": "AEP → EZE (Valet Combinado)",
+    "form_aeropuerto_otro": "OTRA COMBINACIÓN",
+    "form_tipo_vehiculo_label": "TIPO DE VEHÍCULO",
+    "form_traslado": "TRASLADO",
+    "form_valet": "VALET PARKING",
+    "form_cotizar": "COTIZAR",
+    "result_title": "RESUMEN DE TU COTIZACIÓN",
+    "result_estadia": "ESTADÍA",
+    "result_vehiculo": "VEHÍCULO",
+    "result_ingreso": "Ingreso:",
+    "result_egreso": "Regreso:",
+    "result_servicio_label": "SERVICIO SELECCIONADO",
+    "result_traslado_desc": "Traslado (Ida y Vuelta)",
+    "result_valet_desc": "Valet Parking (Directo a Terminal)",
+    "result_tarifa_base": "Tarifa Base",
+    "result_servicio_valet": "Servicio Valet (EZE/AEP)",
+    "result_total": "TOTAL FINAL",
+    "result_confirmar_whatsapp": "CONFIRMAR TARIFA POR WHATSAPP",
+    "result_ahorro": "¡Te ahorrás {savings} vs. la tarifa oficial del aeropuerto!",
+    "result_whatsapp_msg_prefix": "Hola Cocheras Ezeiza Sur, quiero solicitar una reserva:",
+    "form_tipo_auto": "Auto",
+    "form_tipo_camioneta": "Camioneta",
+    "form_tipo_suv": "SUV",
+    "form_tipo_moto": "Moto",
+    "form_tipo_especial": "Especiales/Grande (RAM, RAPTOR, DUCATO, SPRINTER)"
+  },
+  "lang": {
+    "es": "ES",
+    "en": "EN",
+    "pt": "PT"
+  },
+  "notification_bar": [
+    "VUELOS NACIONALES: PRESENTARSE 2 ½ HS ANTES DEL VUELO.",
+    "VUELOS INTERNACIONALES: PRESENTARSE 3 ½ HS ANTES DEL VUELO.",
+    "REGISTRO: VÁLIDO SÓLO CON DNI/PASAPORTE."
+  ],
+  "experiencia": {
+    "title": "LA EXPERIENCIA QUE OFRECEMOS",
+    "card1_title": "COCHERRAS 100% CERRADAS",
+    "card1_desc": "Estructura totalmente cerrada. Su vehículo queda resguardado de granizos y sol intenso en nuestras cocheras techadas.",
+    "card2_title": "SEGURIDAD Y MONITOREO 24/7",
+    "card2_desc": "Predio custodiado las 24 horas y monitoreo constante por circuito cerrado de cámaras. Viajá con absoluta tranquilidad.",
+    "card3_title": "TRASLADO INCLUIDO",
+    "card3_desc": "Llevamos hasta 4 personas al aeropuerto de forma inmediata en nuestro vehículo. Servicio bonificado en tu tarifa, sin costos ocultos.",
+    "card4_title": "AUXILIO MECÁNICO BÁSICO",
+    "card4_desc": "¿Un imprevisto al regresar? Te brindamos asistencia sin cargo con el inflado de neumáticos o puente de batería para que arranques sin estrés.",
+    "card5_title": "+10 AÑOS DE EXPERIENCIA",
+    "card5_desc": "Somos una empresa familiar, atendida directamente por sus dueños. Garantizamos un trato cálido y personalizado para cada pasajero.",
+    "card6_title": "CANCELACIÓN FLEXIBLE",
+    "card6_desc": "Entendemos que los vuelos y los planes pueden cambiar. Podés cancelar o modificar tu reserva en cualquier momento sin costo adicional.",
+    "cta_title": "Ahorrá hasta un 40% vs EZE.",
+    "cta_subtitle": "Misma seguridad, mejor servicio, precio imbatible.",
+    "cta_button": "Ver Tarifas",
+    "cta_whatsappMessage": "Hola, vengo desde la web. Me gustaría aprovechar la promoción del 40%."
+  },
+  "servicios": {
+    "title": "Nuestros Servicios Principales",
+    "traslado": "TRASLADO:",
+    "valet": "VALET PARKING:",
+    "trasladoSteps": [
+      {
+        "title": "1. CHECK-IN RÁPIDO",
+        "desc": "Dejás tu auto. Registramos tus datos y tu vuelo al instante para total control y seguridad."
+      },
+      {
+        "title": "2. TRASLADO DIRECTO",
+        "desc": "Te llevamos en nuestro vehículo (hasta 4 pasajeros). Espacio garantizado para tu grupo y equipaje."
+      },
+      {
+        "title": "3. REGRESO ÁGIL",
+        "desc": "Al momento de aterrizar, ¡Nos contactás por WhatsApp y acordamos el punto de encuentro!"
+      }
+    ],
+    "valetSteps": [
+      {
+        "title": "1. RECEPCIÓN EN TERMINAL",
+        "desc": "Vas directo al aeropuerto (Ezeiza o Aeroparque). Nos entregás tu auto en la puerta y te vas a tu vuelo sin demoras."
+      },
+      {
+        "title": "2. RESGUARDO SEGURO",
+        "desc": "Nos encargamos de llevar tu vehículo y guardarlo en nuestras cocheras 100% cerradas mientras viajás."
+      },
+      {
+        "title": "3. ENTREGA AL ATERRIZAR",
+        "desc": "Cuando regreses, te estamos esperando con tu auto en la puerta de arribos listo para que vuelvas a casa."
+      }
+    ],
+    "extraCostsTitle": "⚠️ Costos Adicionales del Servicio:",
+    "extraCostsDesc": "+ {valet_standard} (Retiro y entrega en Ezeiza). + {valet_combinado} (Combinado: Ej. Retiro en EZE y entrega en AEP, o viceversa)."
+  },
+  "modalidades": {
+    "title": "Diversas Modalidades",
+    "subtitle": "Elegí la modalidad que mejor se adapte a tu viaje. Comodidad absoluta en cada paso.",
+    "popularBadge": "MÁS POPULAR",
+    "consultText": "Consultar servicio",
+    "cards": [
+      {
+        "title": "TRASLADO ESTÁNDAR",
+        "features": [
+          "Estacionás y te llevamos",
+          "Traslado 24/7 sin cargo",
+          "Cocheras totalmente cerradas"
+        ],
+        "price": "Desde {tarifa_base} (Tarifa base)"
+      },
+      {
+        "title": "VALET PARKING",
+        "features": [
+          "Entrega en la terminal",
+          "Ahorro máximo de tiempo",
+          "Recepción 24hs"
+        ],
+        "price": "+ {valet_standard} (Costo adicional)"
+      },
+      {
+        "title": "CRUCEROS",
+        "features": [
+          "Retiro y entrega de vehículos en cruceros y buquebus."
+        ],
+        "price": "Consultar servicio"
+      }
+    ]
+  },
+  "identidad": {
+    "title": "NUESTRA IDENTIDAD",
+    "card1_title": "EXPERIENCIA Y SEGURIDAD PREMIUM",
+    "card1_desc": "Diseñamos un entorno de máxima protección para su patrimonio. Nuestras instalaciones cuentan con cocheras 100% cerradas de pared y techo, garantizando resguardo absoluto contra factores climáticos.",
+    "card1_feat1_title": "MONITOREO ACTIVO",
+    "card1_feat1_desc": "Vigilancia profesional las 24hs con sistemas de cámaras de alta definición.",
+    "card1_feat2_title": "TRASLADO INMEDIATO",
+    "card1_feat2_desc": "Logística sincronizada para traslados a la terminal sin tiempos de espera.",
+    "card2_title": "NUESTRA TRAYECTORIA",
+    "card2_desc": "Somos una empresa familiar con más de 10 años de experiencia en el sector aeroportuario. Nuestra filosofía se basa en el trato directo y la excelencia operativa.",
+    "card2_feat1_title": "ATENCIÓN POR SUS DUEÑOS",
+    "card2_feat1_desc": "Garantizamos un trato personalizado y resolutivo en cada interacción.",
+    "card2_feat2_title": "VALET PARKING DIFERENCIAL",
+    "card2_feat2_desc": "Servicio exclusivo de recepción y entrega diseñado para el viajero frecuente."
+  },
+  "testimonios": {
+    "title": "TESTIMONIOS",
+    "subtitle": "Lo que dicen quienes ya confían su vehículo en nuestras manos.",
+    "cards": [
+      {
+        "initials": "RM",
+        "name": "RICARDO MARTÍNEZ",
+        "role": "VIAJERO FRECUENTE",
+        "text": "\"Impecable el servicio de Valet. Me recibieron el auto en la terminal y al volver me lo entregaron en minutos. Mucho más cómodo y rápido que estacionar en el aeropuerto.\""
+      },
+      {
+        "initials": "LS",
+        "name": "LAURA SÍVORI",
+        "role": "CLIENTE PARTICULAR",
+        "text": "\"La seguridad es mi prioridad y acá dormí tranquilo. Cocheras cerradas de verdad y el traslado a la terminal fue inmediato. No esperé ni 5 minutos.\""
+      },
+      {
+        "initials": "JP",
+        "name": "JUAN PABLO FERRO",
+        "role": "VIAJE DE NEGOCIOS",
+        "text": "\"Excelente relación precio-calidad. El ahorro comparado con el parking oficial es notable y el servicio es mucho más personalizado. Lo recomiendo 100%.\""
+      }
+    ]
+  },
+  "faq": {
+    "title": "PREGUNTAS FRECUENTES",
+    "badge": "Consultas",
+    "subtitle": "Todo lo que necesitás saber antes de tu reserva.",
+    "items": [
+      {
+        "q": "¿LAS COCHERAS SON CERRADAS?",
+        "a": "Sí, cerradas tanto de techo como de paredes. Tu vehículo queda completamente resguardado contra lluvia, granizo, sol y viento. Sin semicubiertas ni espacios al aire libre."
+      },
+      {
+        "q": "¿DEBO DEJAR LAS LLAVES DE MI VEHÍCULO?",
+        "a": "Sí, al ingresar dejás las llaves para que podamos reubicar los autos dentro del predio. Para tu tranquilidad, tomamos foto de los kilómetros y el nivel de combustible antes de moverlo."
+      },
+      {
+        "q": "¿CÓMO Y CUÁNDO LO DEBO ABONAR?",
+        "a": "Podés abonar al ingreso o al egreso, como prefieras. Aceptamos efectivo en pesos, transferencia bancaria y Mercado Pago. Sin cargo por método de pago."
+      },
+      {
+        "q": "¿QUÉ PASA SI MI VUELO SE RETRASA O MODIFICA?",
+        "a": "¡Sin problema! Nos avisás por WhatsApp y coordinamos el cambio sin costo adicional. Operamos las 24 horas, los 365 días del año."
+      },
+      {
+        "q": "¿HASTA CUÁNTAS PERSONAS INCLUYE EL TRASLADO?",
+        "a": "El traslado al aeropuerto incluye hasta 4 personas con su equipaje habitual, sin costo adicional. El servicio está bonificado dentro de tu tarifa."
+      },
+      {
+        "q": "¿PUEDO CANCELAR MI RESERVA?",
+        "a": "Sí, podés cancelar cuando quieras y sin ningún costo. Sin penalidades ni retenciones. Solo avisanos por WhatsApp."
+      }
+    ]
+  },
+  "ubicacion": {
+    "title": "UBICACIÓN ESTRATÉGICA",
+    "btnUrl": "CÓMO LLEGAR"
+  },
+  "footer": {
+    "rights": "Cocheras Ezeiza Sur. Todos los derechos reservados.",
+    "legales": [
+      "Términos y Condiciones",
+      "Políticas de Privacidad"
+    ]
+  },
+  "terminos": {
+    "meta_title": "Términos y Condiciones — Cocheras Ezeiza Sur",
+    "page_title": "TÉRMINOS Y CONDICIONES",
+    "page_subtitle": "Leé con atención las condiciones de uso de nuestros servicios de estacionamiento y traslados.",
+    "last_updated": "Última actualización: Abril 2026",
+    "back_link": "← Volver al inicio",
+    "sections": [
+      {
+        "title": "RESERVAS Y CONFIRMACIÓN",
+        "content": [
+          "El servicio se confirma exclusivamente a través de WhatsApp al número oficial de Cocheras Ezeiza Sur. La reserva es válida únicamente para el período, servicio y vehículo informados al momento de confirmar.",
+          "El tiempo de estadía se calcula en bloques exactos de 24 horas desde el ingreso efectivo al predio. Las fracciones que superen un bloque completo se cuentan como un día adicional."
+        ]
+      },
+      {
+        "title": "TARIFAS Y MEDIOS DE PAGO",
+        "content": [
+          "Las tarifas vigentes son las publicadas en el sitio web al momento del ingreso al predio. El cotizador online es una estimación orientativa; la tarifa definitiva se calcula al retiro del vehículo.",
+          "El pago se efectúa al retiro. Aceptamos efectivo en pesos argentinos, transferencia bancaria y Mercado Pago."
+        ]
+      },
+      {
+        "title": "CANCELACIONES Y MODIFICACIONES",
+        "content": [
+          "Las cancelaciones son gratuitas hasta 24 horas antes del ingreso pactado. Las modificaciones de fechas, horarios o tipo de servicio se coordinan por WhatsApp sin cargo adicional.",
+          "No se realizan devoluciones parciales por salidas anticipadas ni por estadías más cortas que las reservadas."
+        ]
+      },
+      {
+        "title": "RESPONSABILIDAD SOBRE EL VEHÍCULO",
+        "content": [
+          "Al ingresar al predio, el cliente entrega las llaves del vehículo a nuestro personal para permitir su reubicación dentro de las cocheras. Las llaves son resguardadas de forma segura en todo momento.",
+          "Cocheras Ezeiza Sur cuenta con vigilancia 24hs y cámaras de seguridad. No nos responsabilizamos por objetos personales, dinero, documentos ni artículos de valor dejados en el interior del vehículo.",
+          "En caso de detectar daños preexistentes o producidos durante la estadía, el cliente debe informarlos antes de retirarse del predio. No se aceptan reclamos posteriores al retiro."
+        ]
+      },
+      {
+        "title": "SERVICIO DE TRASLADO",
+        "content": [
+          "El traslado al aeropuerto está incluido en la tarifa base y cubre hasta 4 pasajeros con equipaje de mano habitual. El horario de salida se coordina según la hora de vuelo informada.",
+          "Para vuelos internacionales recomendamos presentarse al predio con al menos 3½ horas de anticipación; para vuelos nacionales, 2½ horas. Cocheras Ezeiza Sur no se responsabiliza por demoras ajenas a su operación."
+        ]
+      },
+      {
+        "title": "VALET PARKING",
+        "content": [
+          "El servicio de Valet tiene un costo adicional según la combinación aeroportuaria elegida: {valet_standard} ARS para retiro y entrega en el mismo aeropuerto (Ezeiza o Aeroparque); {valet_combinado} ARS para el servicio combinado entre ambos aeropuertos.",
+          "Para el Valet Combinado se requiere coordinación previa con al menos 48 horas de anticipación. El servicio con aeropuertos no listados se cotiza manualmente."
+        ]
+      },
+      {
+        "title": "HORARIOS Y ACCESO",
+        "content": [
+          "Las instalaciones operan las 24 horas, los 365 días del año. El ingreso y egreso pueden coordinarse en cualquier horario contactándonos por WhatsApp con anticipación.",
+          "Dirección: {direccion}"
+        ]
+      },
+      {
+        "title": "LIMITACIONES DE RESPONSABILIDAD",
+        "content": [
+          "No asumimos responsabilidad por daños causados por fenómenos naturales, actos de terceros fuera del predio o circunstancias de fuerza mayor.",
+          "Nuestra responsabilidad máxima ante cualquier reclamo se limita al valor de la tarifa efectivamente abonada por la estadía en cuestión."
+        ]
+      },
+      {
+        "title": "CONTACTO",
+        "content": [
+          "Para consultas, reclamos o sugerencias podés comunicarte por WhatsApp al número oficial, por correo a {email}, o visitarnos en el predio.",
+          "Nos reservamos el derecho de actualizar estos términos. Los cambios rigen desde su publicación en este sitio."
+        ]
+      }
+    ]
+  },
+  "politicas": {
+    "meta_title": "Política de Privacidad — Cocheras Ezeiza Sur",
+    "page_title": "POLÍTICA DE PRIVACIDAD",
+    "page_subtitle": "Cómo recopilamos, usamos y protegemos tu información personal.",
+    "last_updated": "Última actualización: Abril 2026",
+    "back_link": "← Volver al inicio",
+    "sections": [
+      {
+        "title": "DATOS QUE RECOPILAMOS",
+        "content": [
+          "Al confirmar una reserva por WhatsApp recopilamos: nombre o apodo, número de patente del vehículo, número de vuelo, y fechas y horarios de ingreso y egreso.",
+          "No recopilamos datos bancarios, números de tarjeta ni información financiera de ningún tipo."
+        ]
+      },
+      {
+        "title": "USO DE LA INFORMACIÓN",
+        "content": [
+          "Los datos recopilados se usan exclusivamente para gestionar tu reserva, coordinar el servicio y comunicarnos ante cualquier cambio operativo.",
+          "No utilizamos tus datos para fines publicitarios ni los procesamos para perfilado automatizado."
+        ]
+      },
+      {
+        "title": "ALMACENAMIENTO Y SEGURIDAD",
+        "content": [
+          "La información se resguarda en el historial de WhatsApp Business de la empresa, sujeto a las políticas de privacidad de Meta Platforms.",
+          "Aplicamos medidas razonables de seguridad y no conservamos los datos por más tiempo del necesario para la prestación del servicio."
+        ]
+      },
+      {
+        "title": "COMPARTICIÓN DE DATOS",
+        "content": [
+          "No compartimos, vendemos ni cedemos tus datos personales a terceros con fines comerciales.",
+          "Podríamos compartir información únicamente ante requerimiento de autoridad competente mediante orden judicial, en cumplimiento de las leyes vigentes en la República Argentina."
+        ]
+      },
+      {
+        "title": "COOKIES",
+        "content": [
+          "Este sitio web no utiliza cookies de seguimiento, publicidad comportamental ni scripts de análisis que identifiquen usuarios de forma individual.",
+          "Podemos utilizar herramientas básicas de estadísticas de acceso que no permiten identificar personas directamente."
+        ]
+      },
+      {
+        "title": "TUS DERECHOS",
+        "content": [
+          "Conforme a la Ley N.° 25.326 de Protección de Datos Personales de Argentina, tenés derecho a acceder, rectificar y suprimir tus datos personales.",
+          "Para ejercer estos derechos, podés comunicarte por WhatsApp o escribirnos a {email}. Responderemos en un plazo de 15 días hábiles."
+        ]
+      },
+      {
+        "title": "CAMBIOS EN ESTA POLÍTICA",
+        "content": [
+          "Nos reservamos el derecho de actualizar esta política en cualquier momento. Los cambios entran en vigencia desde su publicación en este sitio.",
+          "Recomendamos revisarla periódicamente para mantenerte informado/a."
+        ]
+      },
+      {
+        "title": "CONTACTO",
+        "content": [
+          "Para consultas sobre el tratamiento de tus datos, podés comunicarte por WhatsApp o escribirnos a {email}.",
+          "Dirección: {direccion}"
+        ]
+      }
+    ]
+  }
+}

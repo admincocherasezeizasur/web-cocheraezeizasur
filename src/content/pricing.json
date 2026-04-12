@@ -1,0 +1,49 @@
+{
+  "pricingRules": {
+    "ranges": [
+      {
+        "id": "1_to_10",
+        "minDays": 1,
+        "maxDays": 10,
+        "calculationType": "flat_rate",
+        "rate": 19000
+      },
+      {
+        "id": "11_to_14",
+        "minDays": 11,
+        "maxDays": 14,
+        "calculationType": "base_plus_extra",
+        "accumulatedBasePrice": 175000,
+        "baseDaysIncluded": 10,
+        "extraRatePerDay": 17500
+      },
+      {
+        "id": "15_plus",
+        "minDays": 15,
+        "maxDays": 999,
+        "calculationType": "base_plus_extra",
+        "accumulatedBasePrice": 245000,
+        "baseDaysIncluded": 14,
+        "extraRatePerDay": 6000
+      }
+    ],
+    "vehicleTypes": {
+      "standard": {
+        "multiplier": 1.0,
+        "i18n_key": "vehicles.types.standard"
+      },
+      "special": {
+        "multiplier": 1.1,
+        "i18n_key": "vehicles.types.special"
+      }
+    },
+    "officialAirportRates": {
+      "ezeiza_por_dia": 50000,
+      "aeroparque_por_dia": 60000
+    },
+    "additionalServices": {
+      "valet_standard": 25000,
+      "valet_combinado": 90000
+    }
+  }
+}

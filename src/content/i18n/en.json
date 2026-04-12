@@ -1,0 +1,368 @@
+{
+  "nav": {
+    "inicio": "HOME",
+    "servicios": "SERVICES",
+    "tarifas": "RATES",
+    "ubicacion": "LOCATION",
+    "contacto": "CONTACT",
+    "contacto_whatsappMessage": "Hi! I'm contacting you from your website, I would like more information."
+  },
+  "hero": {
+    "title_line1": "Your car",
+    "title_highlight": "secure",
+    "title_line2": ", your trip peaceful.",
+    "subtitle": "100% covered garages strategically located minutes from Ezeiza Airport. Maximum security for your vehicle while you enjoy your destination.",
+    "feature1_title": "FLEXIBLE\nCANCELLATION,\nNO EXTRA COST.",
+    "feature2_title": "FLEXIBLE\nWAIT\nTIMES.",
+    "feature3_title": "24/7 SURVEILLANCE.",
+    "cta_quote": "GET A QUOTE",
+    "form_fecha_ingreso": "CHECK-IN DATE",
+    "form_fecha_egreso": "CHECK-OUT DATE",
+    "form_nota_hora": "* Important: The time provided must be your flight departure time. Hours are counted from check-in time in 24h blocks.",
+    "form_aeropuerto_label": "DEPARTURE & RETURN AIRPORT?",
+    "form_aeropuerto_ezeiza": "EZEIZA",
+    "form_aeropuerto_aeroparque": "AEROPARQUE",
+    "form_aeropuerto_eze_aep": "EZE → AEP (Combined Valet)",
+    "form_aeropuerto_aep_eze": "AEP → EZE (Combined Valet)",
+    "form_aeropuerto_otro": "OTHER COMBINATION",
+    "form_tipo_vehiculo_label": "VEHICLE TYPE",
+    "form_traslado": "SHUTTLE",
+    "form_valet": "VALET PARKING",
+    "form_cotizar": "GET QUOTE",
+    "result_title": "YOUR QUOTE SUMMARY",
+    "result_estadia": "STAY",
+    "result_vehiculo": "VEHICLE",
+    "result_ingreso": "Check-in:",
+    "result_egreso": "Check-out:",
+    "result_servicio_label": "SELECTED SERVICE",
+    "result_traslado_desc": "Shuttle (Round Trip)",
+    "result_valet_desc": "Valet Parking (Direct to Terminal)",
+    "result_tarifa_base": "Base Rate",
+    "result_servicio_valet": "Valet Service (EZE/AEP)",
+    "result_total": "TOTAL",
+    "result_confirmar_whatsapp": "CONFIRM RATE VIA WHATSAPP",
+    "result_ahorro": "You save {savings} compared to the official airport rate!",
+    "result_whatsapp_msg_prefix": "Hello Cocheras Ezeiza Sur, I would like to request a reservation:",
+    "form_tipo_auto": "Car",
+    "form_tipo_camioneta": "Pickup Truck",
+    "form_tipo_suv": "SUV",
+    "form_tipo_moto": "Motorcycle",
+    "form_tipo_especial": "Special/Large (RAM, RAPTOR, DUCATO, SPRINTER)"
+  },
+  "lang": {
+    "es": "ES",
+    "en": "EN",
+    "pt": "PT"
+  },
+  "notification_bar": [
+    "DOMESTIC FLIGHTS: ARRIVE 2 ½ HRS BEFORE DEPARTURE.",
+    "INTERNATIONAL FLIGHTS: ARRIVE 3 ½ HRS BEFORE DEPARTURE.",
+    "REGISTRATION: VALID ONLY WITH ID/PASSPORT."
+  ],
+  "experiencia": {
+    "title": "THE EXPERIENCE WE OFFER",
+    "card1_title": "100% COVERED PARKING",
+    "card1_desc": "Fully enclosed structure. Your vehicle is protected from hail and intense sun in our roofed garages.",
+    "card2_title": "24/7 SECURITY & MONITORING",
+    "card2_desc": "Premises guarded 24 hours a day with constant monitoring via closed-circuit cameras. Travel with complete peace of mind.",
+    "card3_title": "SHUTTLE INCLUDED",
+    "card3_desc": "We take up to 4 people to the airport immediately in our vehicle. Service included in your rate, with no hidden costs.",
+    "card4_title": "BASIC ROADSIDE ASSISTANCE",
+    "card4_desc": "An unexpected issue upon return? We provide free assistance with tire inflation or a battery jump-start so you can leave stress-free.",
+    "card5_title": "10+ YEARS OF EXPERIENCE",
+    "card5_desc": "We are a family business, attended directly by its owners. We guarantee warm and personalized treatment for every passenger.",
+    "card6_title": "FLEXIBLE CANCELLATION",
+    "card6_desc": "We understand that flights and plans can change. You can cancel or modify your reservation at any time at no additional cost.",
+    "cta_title": "Save up to 40% vs EZE.",
+    "cta_subtitle": "Same security, better service, unbeatable price.",
+    "cta_button": "View Rates",
+    "cta_whatsappMessage": "Hi, I'm coming from the website. I would like to take advantage of the 40% promotion."
+  },
+  "servicios": {
+    "title": "Our Main Services",
+    "traslado": "SHUTTLE:",
+    "valet": "VALET PARKING:",
+    "trasladoSteps": [
+      {
+        "title": "1. FAST CHECK-IN",
+        "desc": "Leave your car. We instantly register your details and flight for complete control and security."
+      },
+      {
+        "title": "2. DIRECT SHUTTLE",
+        "desc": "We take you in our vehicle (up to 4 passengers). Guaranteed space for your group and luggage."
+      },
+      {
+        "title": "3. AGILE RETURN",
+        "desc": "Upon landing, contact us via WhatsApp and we will agree on the meeting point!"
+      }
+    ],
+    "valetSteps": [
+      {
+        "title": "1. TERMINAL RECEPTION",
+        "desc": "Go straight to the airport (Ezeiza or Aeroparque). Hand us your car at the door and go to your flight without delays."
+      },
+      {
+        "title": "2. SECURE SHELTER",
+        "desc": "We take care of transporting your vehicle and storing it in our 100% covered garages while you travel."
+      },
+      {
+        "title": "3. DELIVERY UPON LANDING",
+        "desc": "When you return, we will be waiting with your car at the arrivals door ready for you to go home."
+      }
+    ],
+    "extraCostsTitle": "⚠️ Additional Service Costs:",
+    "extraCostsDesc": "+ {valet_standard} (Pickup and delivery at Ezeiza). + {valet_combinado} (Combined: e.g., Pickup at EZE and delivery at AEP, or vice versa)."
+  },
+  "modalidades": {
+    "title": "Various Modalities",
+    "subtitle": "Choose the modality that best suits your trip. Absolute comfort at every step.",
+    "popularBadge": "MOST POPULAR",
+    "consultText": "Inquire about service",
+    "cards": [
+      {
+        "title": "STANDARD SHUTTLE",
+        "features": [
+          "Park and we drive you",
+          "Free 24/7 shuttle",
+          "Fully covered garages"
+        ],
+        "price": "From {tarifa_base} (Base rate)"
+      },
+      {
+        "title": "VALET PARKING",
+        "features": [
+          "Terminal drop-off",
+          "Maximum time saving",
+          "24h reception"
+        ],
+        "price": "+ {valet_standard} (Additional cost)"
+      },
+      {
+        "title": "CRUISES",
+        "features": [
+          "Vehicle pick-up and delivery at cruise terminals and Buquebus."
+        ],
+        "price": "Inquire about service"
+      }
+    ]
+  },
+  "identidad": {
+    "title": "OUR IDENTITY",
+    "card1_title": "PREMIUM EXPERIENCE & SECURITY",
+    "card1_desc": "We design a maximum protection environment for your assets. Our facilities feature 100% enclosed garages with walls and roofs, ensuring absolute shelter from climatic factors.",
+    "card1_feat1_title": "ACTIVE MONITORING",
+    "card1_feat1_desc": "Professional 24/7 surveillance with high-definition camera systems.",
+    "card1_feat2_title": "IMMEDIATE SHUTTLE",
+    "card1_feat2_desc": "Synchronized logistics for terminal transfers with no waiting times.",
+    "card2_title": "OUR TRACK RECORD",
+    "card2_desc": "We are a family business with over 10 years of experience in the airport sector. Our philosophy is based on direct interaction and operational excellence.",
+    "card2_feat1_title": "ATTENDED BY OWNERS",
+    "card2_feat1_desc": "We guarantee a personalized and decisive approach in every interaction.",
+    "card2_feat2_title": "DIFFERENTIAL VALET PARKING",
+    "card2_feat2_desc": "Exclusive reception and delivery service designed for the frequent traveler."
+  },
+  "testimonios": {
+    "title": "TESTIMONIALS",
+    "subtitle": "What those who already trust their vehicle in our hands say.",
+    "cards": [
+      {
+        "initials": "RM",
+        "name": "RICARDO MARTÍNEZ",
+        "role": "FREQUENT FLYER",
+        "text": "\"Impeccable Valet service. They received my car at the terminal and delivered it to me in minutes when I returned. Much more comfortable and faster than parking at the airport.\""
+      },
+      {
+        "initials": "LS",
+        "name": "LAURA SÍVORI",
+        "role": "PRIVATE CLIENT",
+        "text": "\"Security is my priority and here I slept peacefully. Truly enclosed garages and the shuttle to the terminal was immediate. I didn't even wait 5 minutes.\""
+      },
+      {
+        "initials": "JP",
+        "name": "JUAN PABLO FERRO",
+        "role": "BUSINESS TRIP",
+        "text": "\"Excellent price-quality ratio. The savings compared to official parking are remarkable and the service is much more personalized. I recommend it 100%.\""
+      }
+    ]
+  },
+  "faq": {
+    "title": "FREQUENTLY ASKED QUESTIONS",
+    "badge": "Support",
+    "subtitle": "Everything you need to know before booking.",
+    "items": [
+      {
+        "q": "ARE THE GARAGES FULLY ENCLOSED?",
+        "a": "Yes, both walls and roof — completely enclosed. Your vehicle is fully protected from rain, hail, wind and sun. No semi-covered or open-air spaces."
+      },
+      {
+        "q": "DO I HAVE TO LEAVE MY KEYS?",
+        "a": "Yes, we keep your keys to reposition vehicles inside the facility as needed. For your peace of mind, we photograph the odometer and fuel level before moving it."
+      },
+      {
+        "q": "HOW AND WHEN DO I PAY?",
+        "a": "You can pay at check-in or check-out — your choice. We accept cash (ARS), bank transfer and Mercado Pago. No surcharge for any payment method."
+      },
+      {
+        "q": "WHAT IF MY FLIGHT IS DELAYED OR CHANGED?",
+        "a": "No problem at all. Just let us know via WhatsApp and we'll adjust your schedule at no extra cost. We operate 24 hours a day, 365 days a year."
+      },
+      {
+        "q": "HOW MANY PEOPLE DOES THE SHUTTLE INCLUDE?",
+        "a": "The airport shuttle fits up to 4 passengers with standard luggage at no extra cost. It's already included in your parking rate."
+      },
+      {
+        "q": "CAN I CANCEL MY RESERVATION?",
+        "a": "Yes, you can cancel anytime and at no cost whatsoever. No penalties, no holds. Just let us know via WhatsApp."
+      }
+    ]
+  },
+  "ubicacion": {
+    "title": "STRATEGIC LOCATION",
+    "btnUrl": "HOW TO GET THERE"
+  },
+  "footer": {
+    "rights": "Cocheras Ezeiza Sur. All rights reserved.",
+    "legales": [
+      "Terms and Conditions",
+      "Privacy Policies"
+    ]
+  },
+  "terminos": {
+    "meta_title": "Terms and Conditions — Cocheras Ezeiza Sur",
+    "page_title": "TERMS AND CONDITIONS",
+    "page_subtitle": "Please read the conditions of use for our parking and transfer services carefully.",
+    "last_updated": "Last updated: April 2026",
+    "back_link": "← Back to home",
+    "sections": [
+      {
+        "title": "RESERVATIONS AND CONFIRMATION",
+        "content": [
+          "The service is confirmed exclusively via WhatsApp to Cocheras Ezeiza Sur's official number. The reservation is valid only for the period, service, and vehicle stated at the time of confirmation.",
+          "The length of stay is calculated in exact 24-hour blocks from the effective check-in time. Any fraction exceeding a full block is counted as an additional day."
+        ]
+      },
+      {
+        "title": "RATES AND PAYMENT METHODS",
+        "content": [
+          "The applicable rates are those published on the website at the time of check-in. The online quote tool provides an estimate; the final rate is calculated at vehicle pick-up.",
+          "Payment is due at pick-up. We accept Argentine pesos cash, bank transfer, and Mercado Pago."
+        ]
+      },
+      {
+        "title": "CANCELLATIONS AND MODIFICATIONS",
+        "content": [
+          "Cancellations are free of charge up to 24 hours before the agreed check-in time. Changes to dates, times, or service type are coordinated via WhatsApp at no extra cost.",
+          "No partial refunds are issued for early departures or stays shorter than those originally booked."
+        ]
+      },
+      {
+        "title": "VEHICLE RESPONSIBILITY",
+        "content": [
+          "Upon arrival, the customer hands over the vehicle keys to our staff to allow repositioning within the facility. Keys are kept securely at all times.",
+          "Cocheras Ezeiza Sur operates 24/7 surveillance and security cameras. We are not responsible for personal belongings, cash, documents, or valuables left inside the vehicle.",
+          "Any pre-existing or incurred damage must be reported before leaving the premises. Claims submitted after departure will not be accepted."
+        ]
+      },
+      {
+        "title": "TRANSFER SERVICE",
+        "content": [
+          "The airport transfer is included in the base rate and covers up to 4 passengers with standard hand luggage. Departure times are coordinated based on the flight time provided.",
+          "For international flights we recommend arriving at least 3½ hours before departure; for domestic flights, 2½ hours. Cocheras Ezeiza Sur is not responsible for delays beyond its control."
+        ]
+      },
+      {
+        "title": "VALET PARKING",
+        "content": [
+          "Valet Parking carries an additional charge depending on the airport combination chosen: {valet_standard} ARS for pick-up and drop-off at the same airport (Ezeiza or Aeroparque); {valet_combinado} ARS for the combined service between both airports.",
+          "The Combined Valet service requires prior coordination at least 48 hours in advance. Services involving unlisted airports are quoted manually."
+        ]
+      },
+      {
+        "title": "HOURS AND ACCESS",
+        "content": [
+          "The facility operates 24 hours a day, 365 days a year. Check-in and check-out can be arranged at any time by contacting us via WhatsApp in advance.",
+          "Address: {direccion}"
+        ]
+      },
+      {
+        "title": "LIMITATION OF LIABILITY",
+        "content": [
+          "We assume no liability for damage caused by natural disasters, third-party acts outside our premises, or force majeure circumstances.",
+          "Our maximum liability for any claim is limited to the value of the rate paid for the stay in question."
+        ]
+      },
+      {
+        "title": "CONTACT",
+        "content": [
+          "For enquiries, complaints, or suggestions please reach us via our official WhatsApp number, by email at {email}, or visit us at our facility.",
+          "We reserve the right to update these terms. Changes take effect upon publication on this site."
+        ]
+      }
+    ]
+  },
+  "politicas": {
+    "meta_title": "Privacy Policy — Cocheras Ezeiza Sur",
+    "page_title": "PRIVACY POLICY",
+    "page_subtitle": "How we collect, use, and protect your personal information.",
+    "last_updated": "Last updated: April 2026",
+    "back_link": "← Back to home",
+    "sections": [
+      {
+        "title": "DATA WE COLLECT",
+        "content": [
+          "When confirming a reservation via WhatsApp we collect: your name or alias, vehicle licence plate number, flight number, and check-in and check-out dates and times.",
+          "We do not collect banking details, credit card numbers, or any financial information."
+        ]
+      },
+      {
+        "title": "USE OF INFORMATION",
+        "content": [
+          "The data collected is used exclusively to manage your reservation, coordinate the service, and communicate any operational changes.",
+          "We do not use your data for advertising purposes or automated profiling."
+        ]
+      },
+      {
+        "title": "STORAGE AND SECURITY",
+        "content": [
+          "Information is stored in the company's WhatsApp Business conversation history, subject to Meta Platforms' privacy policies.",
+          "We apply reasonable security measures and retain data only for as long as necessary to provide the service."
+        ]
+      },
+      {
+        "title": "DATA SHARING",
+        "content": [
+          "We do not share, sell, or transfer your personal data to third parties for commercial purposes.",
+          "Information may only be shared if required by a competent authority through a court order, in compliance with applicable Argentine law."
+        ]
+      },
+      {
+        "title": "COOKIES",
+        "content": [
+          "This website does not use tracking cookies, behavioural advertising, or analytics scripts that identify individual users.",
+          "We may use basic access statistics tools that do not allow direct identification of individuals."
+        ]
+      },
+      {
+        "title": "YOUR RIGHTS",
+        "content": [
+          "In accordance with Argentine Personal Data Protection Law No. 25,326, you have the right to access, rectify, and delete your personal data.",
+          "To exercise these rights, contact us via WhatsApp or email us at {email}. We will respond within 15 business days."
+        ]
+      },
+      {
+        "title": "CHANGES TO THIS POLICY",
+        "content": [
+          "We reserve the right to update this privacy policy at any time. Changes take effect upon publication on this website.",
+          "We recommend reviewing it periodically to stay informed."
+        ]
+      },
+      {
+        "title": "CONTACT",
+        "content": [
+          "For questions about how your data is handled, contact us via WhatsApp or email us at {email}.",
+          "Address: {direccion}"
+        ]
+      }
+    ]
+  }
+}

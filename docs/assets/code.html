@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cocheras Ezeiza Sur | Premium Automotive Parking</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-fixed": "#001e2d",
+              "on-primary": "#68000e",
+              "on-tertiary": "#00344b",
+              "background": "#131313",
+              "tertiary-container": "#0074a0",
+              "inverse-on-surface": "#313030",
+              "primary-container": "#d90429",
+              "surface-container-high": "#2a2a2a",
+              "surface-container-lowest": "#0e0e0e",
+              "on-surface-variant": "#e7bcba",
+              "secondary-fixed-dim": "#ffb3ae",
+              "surface-tint": "#ffb3af",
+              "secondary-fixed": "#ffdad7",
+              "on-error-container": "#ffdad6",
+              "surface-dim": "#131313",
+              "on-secondary-container": "#ffe7e4",
+              "surface": "#131313",
+              "on-secondary-fixed-variant": "#930013",
+              "tertiary": "#80cfff",
+              "outline-variant": "#5d3f3d",
+              "tertiary-fixed-dim": "#80cfff",
+              "primary-fixed": "#ffdad7",
+              "outline": "#ae8885",
+              "primary": "#ffb3af",
+              "on-primary-container": "#ffeae8",
+              "surface-container-highest": "#353534",
+              "error-container": "#93000a",
+              "error": "#ffb4ab",
+              "secondary-container": "#d70222",
+              "primary-fixed-dim": "#ffb3af",
+              "on-surface": "#e5e2e1",
+              "on-secondary-fixed": "#410004",
+              "on-tertiary-fixed-variant": "#004c6b",
+              "tertiary-fixed": "#c5e7ff",
+              "on-primary-fixed-variant": "#930018",
+              "surface-bright": "#393939",
+              "inverse-primary": "#bf0022",
+              "inverse-surface": "#e5e2e1",
+              "surface-container-low": "#1c1b1b",
+              "secondary": "#ffb3ae",
+              "surface-container": "#201f1f",
+              "on-tertiary-container": "#e0f1ff",
+              "on-primary-fixed": "#410005",
+              "surface-variant": "#353534",
+              "on-secondary": "#68000b",
+              "on-error": "#690005",
+              "on-background": "#e5e2e1"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .neon-glow {
+            box-shadow: 0 0 15px rgba(217, 4, 41, 0.4);
+            transition: all 0.3s ease-in-out;
+        }
+        .neon-glow:hover, .neon-glow:focus-within {
+            box-shadow: 0 0 25px rgba(217, 4, 41, 0.8);
+            border-color: rgba(217, 4, 41, 0.5);
+        }
+        .glass-header {
+            background-color: rgba(19, 19, 19, 0.8);
+            backdrop-filter: blur(12px);
+        }
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Glint Shimmer Effect */
+        @keyframes shimmer {
+            0% { transform: translateX(-150%) skewX(-20deg); }
+            100% { transform: translateX(150%) skewX(-20deg); }
+        }
+        .shimmer-btn {
+            position: relative;
+            overflow: hidden;
+        }
+        .shimmer-btn::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.2),
+                transparent
+            );
+            transform: translateX(-150%) skewX(-20deg);
+            animation: shimmer 3s infinite;
+        }
+
+        /* Bloom Effects */
+        .bloom-layer {
+            pointer-events: none;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+            overflow: hidden;
+        }
+        .bloom-spot {
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(217, 4, 41, 0.1) 0%, transparent 70%);
+            filter: blur(40px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background selection:bg-primary-container selection:text-white">
+<!-- Header -->
+<header class="fixed top-0 w-full z-50 bg-[#131313]/80 backdrop-blur-md shadow-[0_0_15px_rgba(217,4,41,0.2)] border-b border-white/5">
+<div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto w-full">
+<div class="text-xl font-bold tracking-tighter text-[#D90429] font-headline">
+                Cocheras Ezeiza Sur
+            </div>
+<nav class="hidden md:flex gap-8 items-center font-['Space_Grotesk'] uppercase tracking-[0.1em] text-sm">
+<a class="text-[#D90429] font-bold border-b-2 border-[#D90429] pb-1" href="#inicio">Inicio</a>
+<a class="text-white/70 hover:text-white transition-colors duration-300" href="#servicios">Servicios</a>
+<a class="text-white/70 hover:text-white transition-colors duration-300" href="#tarifas">Tarifas</a>
+<a class="text-white/70 hover:text-white transition-colors duration-300" href="#ubicacion">Ubicación</a>
+</nav>
+<button class="bg-transparent border border-[#D90429] text-[#D90429] px-6 py-2 font-headline uppercase tracking-widest text-xs font-bold hover:bg-[#D90429] hover:text-white transition-all duration-300 active:scale-95">
+                Contacto
+            </button>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center px-6 py-12 lg:py-24 overflow-hidden" id="inicio">
+<!-- Hero Background Image & Overlay -->
+<div class="absolute inset-0 z-0">
+<img alt="Modern Indoor Parking Garage" class="w-full h-full object-cover" data-alt="High-end modern indoor parking facility with polished floors and professional lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYCFJOa-4ZvHFrNtkA50vOCm-9xhGGk7S9mStQYvF_ANPkXkIFlIDghIF6BP6vhaWbNIo9X-GpRyrNgr-YH80BLvpkda1Gh14pQxXUSKiqOx0ryaMqp1-uhpKcKEX_fA1ZvdSOBpKUBaC7et-iUJOhjrA6tLn8K0jv29VVU9fbeLf34g0iqOSkXEBIkcRxhxocPXhth2HCimHXxb7YK4Huwo45L6WUosUjOvaBZAXsi9eT-X22nvKzyBJPzLMVTwXMLs5Ljs6hMh8K"/>
+<div class="absolute inset-0 bg-black/75 z-10"></div>
+</div>
+<!-- Bloom Background -->
+<div class="bloom-layer">
+<div class="bloom-spot w-[600px] h-[600px] -right-20 top-20"></div>
+</div>
+<div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-16 relative z-20 items-center">
+<!-- Left: Hero Content -->
+<div class="space-y-8">
+<div class="space-y-4">
+<h1 class="text-5xl lg:text-7xl font-headline font-bold leading-tight text-on-background">
+                            Tu auto <span class="text-[#D90429]">seguro</span>,<br/> tu viaje tranquilo.
+                        </h1>
+<p class="text-lg text-on-surface-variant max-w-xl font-body leading-relaxed">
+                            Cocheras 100% techadas situadas estratégicamente a minutos de Ezeiza. Máxima seguridad para tu vehículo mientras disfrutás de tu destino.
+                        </p>
+</div>
+<div class="flex flex-wrap gap-4">
+<div class="flex items-center gap-2 bg-surface-container-high px-4 py-2 rounded-sm border-l-2 border-[#D90429]">
+<span class="material-symbols-outlined text-[#D90429]" data-icon="verified">verified</span>
+<span class="text-xs font-headline uppercase tracking-wider font-bold">Cancelación Gratuita</span>
+</div>
+<div class="flex items-center gap-2 bg-surface-container-high px-4 py-2 rounded-sm border-l-2 border-[#D90429]">
+<span class="material-symbols-outlined text-[#D90429]" data-icon="security">security</span>
+<span class="text-xs font-headline uppercase tracking-wider font-bold">Vigilancia 24hs</span>
+</div>
+</div>
+</div>
+<!-- Right: Cotizador Card -->
+<div class="bg-[#201f1f] p-8 rounded-lg neon-glow border border-white/5 relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-6xl" data-icon="calculate">calculate</span>
+</div>
+<h2 class="text-2xl font-headline font-bold mb-6 text-white uppercase tracking-tight flex items-center gap-2">
+<span class="w-8 h-[2px] bg-[#D90429]"></span>
+                        Cotizá tu estadía
+                    </h2>
+<form class="space-y-6">
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-2">
+<label class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">Fecha Ingreso</label>
+<input class="w-full bg-surface-container-highest border-none text-white p-3 rounded-sm focus:ring-1 focus:ring-[#D90429] text-sm" type="date"/>
+</div>
+<div class="space-y-2">
+<label class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">Hora</label>
+<input class="w-full bg-surface-container-highest border-none text-white p-3 rounded-sm focus:ring-1 focus:ring-[#D90429] text-sm" type="time"/>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-2">
+<label class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">Fecha Egreso</label>
+<input class="w-full bg-surface-container-highest border-none text-white p-3 rounded-sm focus:ring-1 focus:ring-[#D90429] text-sm" type="date"/>
+</div>
+<div class="space-y-2">
+<label class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">Hora</label>
+<input class="w-full bg-surface-container-highest border-none text-white p-3 rounded-sm focus:ring-1 focus:ring-[#D90429] text-sm" type="time"/>
+</div>
+</div>
+<p class="text-[10px] text-[#D90429] font-bold italic mt-[-12px]">* Importante: La hora informada debe ser la hora de salida de su vuelo.</p>
+<div class="space-y-2">
+<label class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">Tipo de Vehículo</label>
+<select class="w-full bg-surface-container-highest border-none text-white p-3 rounded-sm focus:ring-1 focus:ring-[#D90429] text-sm">
+<option>Auto / SUV</option>
+<option>Pick-up / Grande</option>
+<option>Moto</option>
+</select>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<button class="flex items-center justify-center gap-2 p-3 bg-surface-container-low border border-white/5 text-xs font-bold uppercase tracking-widest hover:border-[#D90429] transition-all" type="button">
+<span class="material-symbols-outlined text-sm" data-icon="airport_shuttle">airport_shuttle</span>
+                                Traslado
+                            </button>
+<button class="flex items-center justify-center gap-2 p-3 bg-surface-container-low border border-white/5 text-xs font-bold uppercase tracking-widest hover:border-[#D90429] transition-all" type="button">
+<span class="material-symbols-outlined text-sm" data-icon="car_repair">car_repair</span>
+                                Valet
+                            </button>
+</div>
+<button class="w-full bg-[#D90429] text-white py-4 font-headline font-bold uppercase tracking-widest flex items-center justify-center gap-3 group transition-all hover:bg-[#E6192B] shimmer-btn">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+                            Cotizar por WhatsApp
+                        </button>
+</form>
+</div>
+</div>
+</section>
+<!-- Urgency Banner -->
+<section class="bg-[#D90429] py-4 overflow-hidden relative">
+<div class="flex whitespace-nowrap animate-marquee">
+<div class="flex items-center gap-8 mx-4">
+<span class="text-white font-headline font-bold uppercase tracking-widest text-sm flex items-center gap-2">⚠️ Observaciones Importantes: Presentarse 2 ½ hs antes para vuelos Nacionales y 3 ½ hs antes para vuelos Internacionales.</span>
+</div>
+<div aria-hidden="true" class="flex items-center gap-8 mx-4">
+<span class="text-white font-headline font-bold uppercase tracking-widest text-sm flex items-center gap-2">⚠️ Observaciones Importantes: Presentarse 2 ½ hs antes para vuelos Nacionales y 3 ½ hs antes para vuelos Internacionales.</span>
+</div>
+</div>
+<style>
+                @keyframes marquee {
+                    0% { transform: translateX(0); }
+                    100% { transform: translateX(-50%); }
+                }
+                .animate-marquee {
+                    animation: marquee 30s linear infinite;
+                }
+            </style>
+</section>
+<!-- Cómo Funciona -->
+<section class="py-24 px-6 bg-surface-container-low" id="servicios">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16 space-y-4">
+<h2 class="text-4xl font-headline font-bold uppercase tracking-tighter">Cómo Funciona</h2>
+<div class="h-1 w-20 bg-[#D90429] mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="text-center space-y-6 group">
+<div class="w-20 h-20 bg-surface-container border border-white/5 rounded-xl flex items-center justify-center mx-auto transition-all group-hover:border-[#D90429] group-hover:neon-glow">
+<span class="material-symbols-outlined text-4xl text-[#D90429]" data-icon="calendar_month">calendar_month</span>
+</div>
+<h3 class="text-xl font-headline font-bold uppercase">1. Reservás</h3>
+<p class="text-on-surface-variant font-body">Completás el formulario o nos escribís por WhatsApp para asegurar tu lugar.</p>
+</div>
+<div class="text-center space-y-6 group">
+<div class="w-20 h-20 bg-surface-container border border-white/5 rounded-xl flex items-center justify-center mx-auto transition-all group-hover:border-[#D90429] group-hover:neon-glow">
+<span class="material-symbols-outlined text-4xl text-[#D90429]" data-icon="directions_car">directions_car</span>
+</div>
+<h3 class="text-xl font-headline font-bold uppercase">2. Estacionás</h3>
+<p class="text-on-surface-variant font-body">Llegás a nuestra base, realizamos el check-in y te llevamos a la terminal.</p>
+</div>
+<div class="text-center space-y-6 group">
+<div class="w-20 h-20 bg-surface-container border border-white/5 rounded-xl flex items-center justify-center mx-auto transition-all group-hover:border-[#D90429] group-hover:neon-glow">
+<span class="material-symbols-outlined text-4xl text-[#D90429]" data-icon="flight_takeoff">flight_takeoff</span>
+</div>
+<h3 class="text-xl font-headline font-bold uppercase">3. Viajás</h3>
+<p class="text-on-surface-variant font-body">Te vas tranquilo sabiendo que tu vehículo está bajo monitoreo constante.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Beneficios (Why Choose Us) -->
+<section class="py-24 px-6 bg-background relative overflow-hidden">
+<div class="bloom-layer">
+<div class="bloom-spot w-[800px] h-[800px] -left-40 bottom-0"></div>
+</div>
+<div class="max-w-7xl mx-auto space-y-16 relative z-20">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div class="bg-[#1E1E24] p-8 border border-white/5 rounded-lg neon-glow hover:bg-surface-container transition-colors h-full flex flex-col">
+<span class="material-symbols-outlined text-3xl text-[#D90429] mb-4" data-icon="star" data-weight="fill">star</span>
+<h4 class="text-lg font-headline font-bold uppercase mb-2">Servicio VIP</h4>
+<p class="text-sm text-on-surface-variant font-body">Atención personalizada y traslados inmediatos sin esperas.</p>
+</div>
+<div class="bg-surface-container rounded-lg neon-glow border border-white/5 overflow-hidden group h-full flex flex-col">
+<div class="relative h-40 overflow-hidden">
+<img alt="Security Camera" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="High-tech security camera system monitoring a facility." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNQTJWdnavQeyDLZtZgC5PQXRXIWMCBgt7g4sPU2yggiXBOeHyn7W-jT1wFt9BNw1SwSDavHXfgNcMpbZKflNNRqu4JFih42Lg1ySM8u0Hh_ALZ3bnobeGIMPeM5fQqXP5JeHxbbH6m7Pou2kQdndBjILfpx7PcgoCo6YGgUGPwhqu83fHJ3B1qsiOwLt6DQAgtGisCmtTvWKoefBkcg8m0Nn2H25VnPLjpQi3MSP04rvhJXWdTLEVbS9XTf7CywGDMsrAEeAftC0f"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container to-transparent"></div>
+</div>
+<div class="p-6 pt-2">
+<h4 class="text-lg font-headline font-bold uppercase mb-2">Vigilancia Avanzada</h4>
+<p class="text-sm text-on-surface-variant font-body">Monitoreo 24/7 con cámaras HD y personal de seguridad calificado.</p>
+</div>
+</div>
+<div class="bg-[#1E1E24] p-8 border border-white/5 rounded-lg neon-glow hover:bg-surface-container transition-colors h-full flex flex-col">
+<span class="material-symbols-outlined text-3xl text-[#D90429] mb-4" data-icon="group" data-weight="fill">group</span>
+<h4 class="text-lg font-headline font-bold uppercase mb-2">Confianza</h4>
+<p class="text-sm text-on-surface-variant font-body">Miles de pasajeros ya confían en nosotros cada mes.</p>
+</div>
+</div>
+<!-- Comparison Banner -->
+<div class="bg-gradient-to-r from-[#D90429] to-[#93000a] p-10 rounded-xl flex flex-col md:flex-row items-center justify-between gap-8 neon-glow">
+<div class="space-y-2">
+<h3 class="text-3xl font-headline font-black uppercase italic tracking-tighter text-white">
+                            Ahorrá hasta un 40% vs EZE.
+                        </h3>
+<p class="text-white/80 font-medium">Misma seguridad, mejor servicio, precio imbatible.</p>
+</div>
+<button class="bg-white text-[#D90429] px-10 py-4 font-headline font-bold uppercase tracking-widest hover:bg-gray-100 transition-colors">
+                        Ver Tarifas
+                    </button>
+</div>
+</div>
+</section>
+<!-- Tipos de Servicio -->
+<section class="py-24 px-6 bg-surface-container-low" id="tarifas">
+<div class="max-w-7xl mx-auto space-y-16">
+<div class="text-center space-y-4">
+<h2 class="text-4xl font-headline font-bold uppercase tracking-tighter">Nuestros Servicios</h2>
+<p class="text-on-surface-variant font-body max-w-2xl mx-auto">Elegí la modalidad que mejor se adapte a tu viaje. Comodidad absoluta en cada paso.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Standard -->
+<div class="bg-surface-container border border-white/5 p-1 hover:border-[#D90429] transition-all group">
+<div class="relative h-48 mb-6 overflow-hidden">
+<img alt="Shuttle Service" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Modern white shuttle van branded with parking logo." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIcl6tIokB6GvuYa781H4EoKj8BhxETSwdXYLIYXHbzjIVLJ9WnPgEHOXdJsFI5d-VMXhL_Jhhfci1o0Wr_sbt4XACsRz88yLiua7KHdMmHQoLduWWHeKMuo9HmRzVKt3Qyq8BqvArUQY6CjblujglIE4cQNbI4GJQshpPGJOpQTWiu6mEBiCCEU-SD5ihafOZYUubVyIon7o9jobf0aTpbeYIttSHoaVKDOGZqCd8fPrxFZaU4H2gBZN5ardYH9_-0tNOjT5x4Hmi"/>
+</div>
+<div class="p-6 space-y-4">
+<h3 class="text-2xl font-headline font-bold uppercase">Traslado Estándar</h3>
+<ul class="space-y-2 text-sm text-on-surface-variant font-body">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-[#D90429] text-sm" data-icon="check_circle">check_circle</span> Estacionás y te llevamos</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-[#D90429] text-sm" data-icon="check_circle">check_circle</span> Traslado 24/7 sin cargo</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-[#D90429] text-sm" data-icon="check_circle">check_circle</span> Cocheras totalmente cerradas</li>
+</ul>
+<div class="pt-4 border-t border-white/10 text-xl font-headline font-bold text-[#D90429]">Desde $19.000 (Tarifa base)</div>
+</div>
+</div>
+<!-- Valet -->
+<div class="bg-surface-container border border-white/5 p-1 hover:border-[#D90429] transition-all group relative">
+<div class="absolute -top-4 right-4 bg-[#D90429] text-white px-4 py-1 text-[10px] font-bold uppercase tracking-widest z-10">Más Popular</div>
+<div class="relative h-48 mb-6 overflow-hidden">
+<img alt="Valet Parking Service" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Professional valet receiving car keys." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfKxD6K-0BwK4CfYj-Me_HkkmtlWNsMGgZBbA8EYr-e2SnK0FzCmlDD5JUyTCq3aUP214qVa0QLQg6qfv2Q4jkDugtuCruXneppJbFRTS1XYicIbXZzaPiOznagiqUSigjNl8E2bYOVrv_SI_DMVbblk-IYdAAMc-bGxytKmVeIv7G8hyD_snlPy502tySnNxlvTNgOkB3C5thOMlU5ZF04tdpc_2C4cBw2b0YIu_wgROZ8B5wINwMg5brr_URl-LOBwRVf29Sd28_"/>
+</div>
+<div class="p-6 space-y-4">
+<h3 class="text-2xl font-headline font-bold uppercase">Valet Parking</h3>
+<ul class="space-y-2 text-sm text-on-surface-variant font-body">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-[#D90429] text-sm" data-icon="check_circle">check_circle</span> Entrega en la terminal</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-[#D90429] text-sm" data-icon="check_circle">check_circle</span> Ahorro máximo de tiempo</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-[#D90429] text-sm" data-icon="check_circle">check_circle</span> Recepción 24hs</li>
+</ul>
+<div class="pt-4 border-t border-white/10 text-xl font-headline font-bold text-[#D90429]">Desde $19.000 (Tarifa base)</div>
+</div>
+</div>
+<!-- Cruises -->
+<div class="bg-surface-container border border-white/5 p-1 hover:border-[#D90429] transition-all group">
+<div class="relative h-48 mb-6 overflow-hidden">
+<img alt="Cruises Parking" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Luxury cruise ship at dock." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsutUWquLsRPJELbr8wKXyOiCmvwWKnvbN5xEw4W3dn2VQVqofr-8_FFA9lt7nOq99qhPHm5SvZJwGD2w4g9kh4Sp9VXTwLk5LAUzRsXUnGXAk3jk41zO6heTDgqF-Gc6xtX--A1DfamWx8F1cpizm6QdhbNXimnQxHPzVxHwUOwbDQeZQ9in2pRXI7PNKhMdSp1T2rep8zgPhJWwuZppapJ4oude914IShN3yXkeP60DALOc1OGzYPzi3XPnP9kyeklpaFt8469Z7"/>
+</div>
+<div class="p-6 space-y-4">
+<h3 class="text-2xl font-headline font-bold uppercase">Cruceros</h3>
+<ul class="space-y-2 text-sm text-on-surface-variant font-body">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-[#D90429] text-sm" data-icon="check_circle">check_circle</span> Larga estadía bonificada</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-[#D90429] text-sm" data-icon="check_circle">check_circle</span> Traslado a Puerto Madero</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-[#D90429] text-sm" data-icon="check_circle">check_circle</span> Lavado incluido (7+ días)</li>
+</ul>
+<div class="pt-4 border-t border-white/10 text-xl font-headline font-bold text-[#D90429]">CONSULTAR PROMO</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Accordion -->
+<section class="py-24 px-6 bg-background">
+<div class="max-w-3xl mx-auto space-y-12">
+<div class="text-center space-y-4">
+<h2 class="text-3xl font-headline font-bold uppercase tracking-tighter">Preguntas Frecuentes</h2>
+<div class="h-1 w-12 bg-[#D90429] mx-auto"></div>
+</div>
+<div class="space-y-4">
+<details class="group bg-surface-container-low p-6 transition-all border-l-2 border-transparent open:border-[#D90429] open:bg-surface-container">
+<summary class="flex justify-between items-center cursor-pointer list-none font-headline font-bold uppercase text-sm tracking-widest">
+                            ¿Las cocheras son techadas?
+                            <span class="material-symbols-outlined transition-transform group-open:rotate-180" data-icon="expand_more">expand_more</span>
+</summary>
+<p class="mt-4 text-on-surface-variant text-sm leading-relaxed font-body">
+                            Sí, contamos con disponibilidad de cocheras 100% techadas para proteger tu vehículo de las inclemencias climáticas, granizo y sol intenso.
+                        </p>
+</details>
+<details class="group bg-surface-container-low p-6 transition-all border-l-2 border-transparent open:border-[#D90429] open:bg-surface-container">
+<summary class="flex justify-between items-center cursor-pointer list-none font-headline font-bold uppercase text-sm tracking-widest">
+                            ¿Debo dejar las llaves?
+                            <span class="material-symbols-outlined transition-transform group-open:rotate-180" data-icon="expand_more">expand_more</span>
+</summary>
+<p class="mt-4 text-on-surface-variant text-sm leading-relaxed font-body">Sí, es obligatorio para el ordenamiento interno. Al ingresar se le toma una foto de los kilómetros y el nivel de combustible para su total tranquilidad.</p>
+</details>
+<details class="group bg-surface-container-low p-6 transition-all border-l-2 border-transparent open:border-[#D90429] open:bg-surface-container">
+<summary class="flex justify-between items-center cursor-pointer list-none font-headline font-bold uppercase text-sm tracking-widest">
+                            ¿Cómo y cuándo lo debo abonar?
+                            <span class="material-symbols-outlined transition-transform group-open:rotate-180" data-icon="expand_more">expand_more</span>
+</summary>
+<p class="mt-4 text-on-surface-variant text-sm leading-relaxed font-body">Lo puede abonar al ingreso o al egreso. Aceptamos Transferencia Bancaria, Mercado Pago o Efectivo.</p>
+</details>
+</div>
+</div>
+</section>
+<!-- Location Section -->
+<section class="bg-surface-container-low py-20 px-6" id="ubicacion">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+<!-- Left: Context Image -->
+<div class="relative overflow-hidden rounded-lg border-2 border-[#D90429]/30 group">
+<img alt="Garage Entrance Outside" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Modern high-security garage entrance from the street view." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBALEYImzABOEVxmxbQKDft1DzLJ8kbBIPuuZMM6nybJJWe0c1Qo5a-_Lftejn-ZOD98vIM9YbMn7PKxYXTY8mHG4SryoU4cturEMeS0JUmindBKUrLw1yTymOQrWLz-tHTycWAX67gw2rXHJKr_zBPwgCXGDXNmHoco_7AqCCYJXBkQ87W64OdKtkEYIVTk9M6325djwLs7XNkoZiO32LpkNYt1pbMdZDo4w-YFfB8IET6kQTnQ_W6rRlJO7v3ndrK4xeGMMfxBvkn"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+</div>
+<!-- Right: Map Placeholder -->
+<div class="relative h-[400px] lg:h-auto overflow-hidden rounded-lg">
+<div class="absolute inset-0 bg-surface-container-highest">
+<img alt="Location Map" class="w-full h-full object-cover grayscale opacity-50" data-alt="Overhead map view of Ezeiza area." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAduuSjH9jZpLT1X2MYj4yY7Wb5FeoJObzfdUpCa9gVT0Kp5NNGxSUbrA1YG3ymt9YpdoBBVultuloqB5DZbmDDmxGF24F-6UJNuHNIa3zMpOWJ1HZMPcKMbcWVcsaN59fnwEn65NnMSzxfiNVGH5jqgRu3Inubz-GGkkEX7m9uF80q1NHu6-rhzicqtwa_pZWI9cek66fK-tKXnpCFvZFfFdcrIJwzIHeyj_KE_dIjBnVRuFFBsVZEpl3j7wykCYmDeQH8YEgJsDlu"/>
+</div>
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none p-4">
+<div class="bg-surface-container p-6 border border-[#D90429] neon-glow text-center pointer-events-auto max-w-xs">
+<h3 class="font-headline font-bold uppercase mb-2">Ubicación Estratégica</h3>
+<p class="text-sm font-body mb-4">Venezuela 424, Ezeiza, Buenos Aires</p>
+<a class="text-[#D90429] text-xs font-bold uppercase tracking-widest flex items-center justify-center gap-2" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="near_me">near_me</span>
+                                Cómo llegar
+                            </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#131313] w-full border-t border-[#353534]/30 font-['Inter'] text-sm tracking-wide">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 py-12 w-full gap-6 max-w-7xl mx-auto">
+<div class="space-y-4">
+<div class="text-lg font-black text-[#D90429] font-headline">Cocheras Ezeiza Sur</div>
+<div class="space-y-2">
+<p class="flex items-center gap-2 text-gray-500 hover:text-white transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-xs" data-icon="location_on">location_on</span>
+                        Venezuela 424, Ezeiza
+                    </p>
+<p class="flex items-center gap-2 text-gray-500 hover:text-white transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-xs" data-icon="phone">phone</span>
+                        +54 9 11 3827-9812
+                    </p>
+<p class="flex items-center gap-2 text-gray-500 hover:text-white transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-xs" data-icon="mail">mail</span>
+                        cocherasezeizasur2@gmail.com
+                    </p>
+</div>
+</div>
+<div class="flex flex-col md:flex-row gap-8 items-center">
+<div class="flex gap-6">
+<a class="text-gray-500 hover:text-white transition-colors" href="#">Términos y Condiciones</a>
+<a class="text-gray-500 hover:text-white transition-colors" href="#">Privacidad</a>
+</div>
+<div class="text-gray-500 text-xs">
+                    © 2024 Cocheras Ezeiza Sur. All rights reserved.
+                </div>
+</div>
+<div class="flex gap-4">
+<div class="w-10 h-10 border border-white/10 flex items-center justify-center hover:border-[#D90429] transition-all cursor-pointer">
+<span class="material-symbols-outlined text-[#D90429]" data-icon="share">share</span>
+</div>
+<div class="w-10 h-10 border border-white/10 flex items-center justify-center hover:border-[#D90429] transition-all cursor-pointer">
+<span class="material-symbols-outlined text-[#D90429]" data-icon="camera">camera</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
