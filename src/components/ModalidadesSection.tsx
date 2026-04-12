@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { Icon } from "@iconify/react";
 import { interpolate, pricingVars } from "@/lib/interpolate";
 
 const MODALIDADES_IMAGES = [
@@ -13,8 +12,17 @@ const MODALIDADES_ICONS = [
   "/whatsapp-fill-icon.svg",
 ];
 
+interface ModalidadCard {
+  title: string;
+  features: string[];
+  price: string;
+  image: string;
+  priceIcon: string;
+  popular: boolean;
+}
+
 export function ModalidadesSection({ dict }: { dict: any }) {
-  const modalidades = dict.modalidades?.cards?.map((c: any, i: number) => ({
+  const modalidades: ModalidadCard[] = dict.modalidades?.cards?.map((c: any, i: number) => ({
     ...c,
     image: MODALIDADES_IMAGES[i],
     priceIcon: MODALIDADES_ICONS[i],
