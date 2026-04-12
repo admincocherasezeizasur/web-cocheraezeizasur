@@ -115,7 +115,7 @@ Los valores monetarios ya están centralizados en `pricing.json`. Sin embargo, a
 | EN | `"(+$25,000 ARS)"` | ídem |
 | PT | `"(+R$25.000)"` | ídem — **¡además usa R$ en vez de $!** (ver sección E) |
 
-**Acción a corto plazo:** Aceptar el hardcoding pero unificar la moneda (ver E).  
+**Acción a corto plazo:** Aceptar el hardcoding pero unificar la moneda siempre en ARS .  
 **Acción ideal:** El componente `HeroQuoteForm.tsx` ya lee `pricing.json`; formatear este valor dinámicamente en lugar de leerlo del diccionario.
 
 ### C2. `servicios.extraCostsDesc` — Descripción de costos adicionales
