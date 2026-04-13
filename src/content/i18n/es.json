@@ -16,8 +16,8 @@
     "feature2_title": "TIEMPOS DE\nESPERAS\nFLEXIBLES.",
     "feature3_title": "VIGILANCIA 24HS.",
     "cta_quote": "COTIZÁ TU ESTADÍA",
-    "form_fecha_ingreso": "FECHA INGRESO",
-    "form_fecha_egreso": "FECHA EGRESO",
+    "form_fecha_ingreso": "FECHA Y HORA DE INGRESO",
+    "form_fecha_egreso": "FECHA Y HORA DE EGRESO",
     "form_nota_hora": "* Importante: La hora informada debe ser la hora de salida de su vuelo. Horarios se contabilizan desde el horario de ingreso en bloques de 24hs.",
     "form_aeropuerto_label": "¿AEROPUERTO DE SALIDA Y REGRESO?",
     "form_aeropuerto_ezeiza": "EZEIZA",
@@ -57,7 +57,8 @@
   "notification_bar": [
     "VUELOS NACIONALES: PRESENTARSE 2 ½ HS ANTES DEL VUELO.",
     "VUELOS INTERNACIONALES: PRESENTARSE 3 ½ HS ANTES DEL VUELO.",
-    "REGISTRO: VÁLIDO SÓLO CON DNI/PASAPORTE."
+    "UNA RESERVA POR VEHÍCULO Y/O DNI.",
+    "COCHERAS EZEIZA SUR NO SE RESPONSABILIZA POR EL INCUMPLIMIENTO DE ESTOS HORARIOS."
   ],
   "experiencia": {
     "title": "LA EXPERIENCIA QUE OFRECEMOS",
@@ -200,11 +201,11 @@
       },
       {
         "q": "¿CÓMO Y CUÁNDO LO DEBO ABONAR?",
-        "a": "Podés abonar al ingreso o al egreso, como prefieras. Aceptamos efectivo en pesos, transferencia bancaria y Mercado Pago. Sin cargo por método de pago."
+        "a": "Podés abonar al ingreso o al egreso, como prefieras. Aceptamos efectivo en pesos, transferencia bancaria y Mercado Pago."
       },
       {
         "q": "¿QUÉ PASA SI MI VUELO SE RETRASA O MODIFICA?",
-        "a": "¡Sin problema! Nos avisás por WhatsApp y coordinamos el cambio sin costo adicional. Operamos las 24 horas, los 365 días del año."
+        "a": "¡Sin problema! Nos avisás por WhatsApp y coordinamos el cambio. Operamos las 24 horas, los 365 días del año."
       },
       {
         "q": "¿HASTA CUÁNTAS PERSONAS INCLUYE EL TRASLADO?",

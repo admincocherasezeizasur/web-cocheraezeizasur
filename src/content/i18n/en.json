@@ -16,8 +16,8 @@
     "feature2_title": "FLEXIBLE\nWAIT\nTIMES.",
     "feature3_title": "24/7 SURVEILLANCE.",
     "cta_quote": "GET A QUOTE",
-    "form_fecha_ingreso": "CHECK-IN DATE",
-    "form_fecha_egreso": "CHECK-OUT DATE",
+    "form_fecha_ingreso": "CHECK-IN DATE & TIME",
+    "form_fecha_egreso": "CHECK-OUT DATE & TIME",
     "form_nota_hora": "* Important: The time provided must be your flight departure time. Hours are counted from check-in time in 24h blocks.",
     "form_aeropuerto_label": "DEPARTURE & RETURN AIRPORT?",
     "form_aeropuerto_ezeiza": "EZEIZA",
@@ -57,7 +57,8 @@
   "notification_bar": [
     "DOMESTIC FLIGHTS: ARRIVE 2 ½ HRS BEFORE DEPARTURE.",
     "INTERNATIONAL FLIGHTS: ARRIVE 3 ½ HRS BEFORE DEPARTURE.",
-    "REGISTRATION: VALID ONLY WITH ID/PASSPORT."
+    "ONE RESERVATION PER VEHICLE AND/OR ID.",
+    "COCHERAS EZEIZA SUR IS NOT RESPONSIBLE FOR NON-COMPLIANCE WITH THESE SCHEDULES."
   ],
   "experiencia": {
     "title": "THE EXPERIENCE WE OFFER",
@@ -200,11 +201,11 @@
       },
       {
         "q": "HOW AND WHEN DO I PAY?",
-        "a": "You can pay at check-in or check-out — your choice. We accept cash (ARS), bank transfer and Mercado Pago. No surcharge for any payment method."
+        "a": "You can pay at check-in or check-out — your choice. We accept cash (ARS), bank transfer and Mercado Pago."
       },
       {
         "q": "WHAT IF MY FLIGHT IS DELAYED OR CHANGED?",
-        "a": "No problem at all. Just let us know via WhatsApp and we'll adjust your schedule at no extra cost. We operate 24 hours a day, 365 days a year."
+        "a": "No problem at all. Just let us know via WhatsApp and we'll adjust your schedule. We operate 24 hours a day, 365 days a year."
       },
       {
         "q": "HOW MANY PEOPLE DOES THE SHUTTLE INCLUDE?",

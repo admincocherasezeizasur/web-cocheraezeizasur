@@ -76,6 +76,8 @@ export function HeroSection({ dict }: HeroProps) {
           fill
           className="object-cover"
           priority
+          quality={75}
+          sizes="100vw"
         />
         {/* Dark overlay */}
         <div className="absolute inset-0 bg-linear-to-r from-black/85 via-black/75 to-black/60" />
@@ -88,7 +90,7 @@ export function HeroSection({ dict }: HeroProps) {
           {/* Left Column — Text Content */}
           <div className="flex flex-col gap-8">
             {/* Headline */}
-            <h1 className="text-[72px] font-headline font-bold leading-tight tracking-normal">
+            <h1 className="text-[42px] sm:text-[56px] lg:text-[72px] font-headline font-bold leading-tight tracking-normal">
               {dict.hero.title_line1}{" "}
               <span className="text-brand-red">{dict.hero.title_highlight}</span>
               {dict.hero.title_line2}
@@ -99,13 +101,15 @@ export function HeroSection({ dict }: HeroProps) {
               {dict.hero.subtitle}
             </p>
 
-            {/* Feature Strip — horizontal bar with dividers */}
-            <div className="flex items-stretch border border-white/10 rounded-sm overflow-hidden mt-2 bg-black/30 backdrop-blur-sm">
+            {/* Feature Strip — vertical on mobile, horizontal on sm+ */}
+            <div className="flex flex-col sm:flex-row items-stretch border border-white/10 rounded-sm overflow-hidden mt-2 bg-black/30 backdrop-blur-sm">
               {features.map((feature, idx) => (
                 <div
                   key={feature.titleKey}
-                  className={`flex items-center gap-3 px-5 py-3.5 flex-1 ${
-                    idx < features.length - 1 ? "border-r border-white/10" : ""
+                  className={`flex items-center gap-3 px-5 py-3.5 sm:flex-1 ${
+                    idx < features.length - 1
+                      ? "border-b sm:border-b-0 sm:border-r border-white/10"
+                      : ""
                   }`}
                 >
                   <Image
@@ -115,8 +119,8 @@ export function HeroSection({ dict }: HeroProps) {
                     height={feature.iconH}
                     className="shrink-0"
                   />
-                  <p className="text-[10px] sm:text-[11px] font-bold text-white uppercase leading-tight tracking-wide whitespace-pre-line">
-                    {dict.hero[feature.titleKey]}
+                  <p className="text-[11px] font-bold text-white uppercase leading-tight tracking-wide">
+                    {dict.hero[feature.titleKey].replace(/\n/g, " ")}
                   </p>
                 </div>
               ))}

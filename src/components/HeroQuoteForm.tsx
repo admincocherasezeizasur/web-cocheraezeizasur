@@ -395,33 +395,37 @@ export function HeroQuoteForm({ dict }: HeroQuoteFormProps) {
       <div className="px-7 pb-7 space-y-4">
         {/* Fecha/Hora Ingreso — datetime-local, min = ahora */}
         <div>
-          <label className="text-[10px] text-white/50 uppercase tracking-wider font-medium block mb-1.5">
+          <label htmlFor="fecha-ingreso" className="text-[10px] text-white/50 uppercase tracking-wider font-medium block mb-1.5">
             {dict.form_fecha_ingreso}
           </label>
           <input
+            id="fecha-ingreso"
             type="datetime-local"
             value={datetimeIngreso}
             min={nowMin}
             onChange={(e) => handleIngresoChange(e.target.value)}
+            onClick={(e) => (e.currentTarget as HTMLInputElement).showPicker?.()}
             className={`w-full bg-white/5 border ${
               hasErrors && !datetimeIngreso ? "border-red-500 bg-red-500/10" : "border-white/10"
-            } rounded-lg px-4 py-2.5 text-sm text-white/80 outline-none focus:border-brand-red/50 transition-colors [color-scheme:dark]`}
+            } rounded-lg px-4 py-2.5 text-sm text-white/80 outline-none focus:border-brand-red/50 transition-colors [color-scheme:dark] cursor-pointer`}
           />
         </div>
 
         {/* Fecha/Hora Egreso — datetime-local, min = ingreso seleccionado */}
         <div>
-          <label className="text-[10px] text-white/50 uppercase tracking-wider font-medium block mb-1.5">
+          <label htmlFor="fecha-egreso" className="text-[10px] text-white/50 uppercase tracking-wider font-medium block mb-1.5">
             {dict.form_fecha_egreso}
           </label>
           <input
+            id="fecha-egreso"
             type="datetime-local"
             value={datetimeEgreso}
             min={datetimeIngreso || nowMin}
             onChange={(e) => { setDatetimeEgreso(e.target.value); setHasErrors(false); }}
+            onClick={(e) => (e.currentTarget as HTMLInputElement).showPicker?.()}
             className={`w-full bg-white/5 border ${
               hasErrors && !datetimeEgreso ? "border-red-500 bg-red-500/10" : "border-white/10"
-            } rounded-lg px-4 py-2.5 text-sm text-white/80 outline-none focus:border-brand-red/50 transition-colors [color-scheme:dark]`}
+            } rounded-lg px-4 py-2.5 text-sm text-white/80 outline-none focus:border-brand-red/50 transition-colors [color-scheme:dark] cursor-pointer`}
           />
         </div>
 
@@ -430,10 +434,11 @@ export function HeroQuoteForm({ dict }: HeroQuoteFormProps) {
 
         {/* Aeropuerto */}
         <div>
-          <label className="text-[10px] text-white/50 uppercase tracking-wider font-medium block mb-1.5">
+          <label htmlFor="aeropuerto-select" className="text-[10px] text-white/50 uppercase tracking-wider font-medium block mb-1.5">
             {dict.form_aeropuerto_label}
           </label>
           <select
+            id="aeropuerto-select"
             value={airport}
             onChange={(e) => setAirport(e.target.value as AirportType)}
             className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-2.5 text-sm text-white/80 outline-none focus:border-brand-red/50 transition-colors appearance-none cursor-pointer [color-scheme:dark]"
@@ -458,10 +463,11 @@ export function HeroQuoteForm({ dict }: HeroQuoteFormProps) {
 
         {/* Tipo de vehículo */}
         <div>
-          <label className="text-[10px] text-white/50 uppercase tracking-wider font-medium block mb-1.5">
+          <label htmlFor="vehiculo-select" className="text-[10px] text-white/50 uppercase tracking-wider font-medium block mb-1.5">
             {dict.form_tipo_vehiculo_label}
           </label>
           <select
+            id="vehiculo-select"
             value={vehicleType}
             onChange={(e) => setVehicleType(e.target.value as VehicleType)}
             className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-2.5 text-sm text-white/80 outline-none focus:border-brand-red/50 transition-colors appearance-none cursor-pointer [color-scheme:dark]"
@@ -489,7 +495,8 @@ export function HeroQuoteForm({ dict }: HeroQuoteFormProps) {
           >
             <Image
               src="/traslado_icon.svg"
-              alt="Traslado"
+              alt=""
+              aria-hidden="true"
               width={13}
               height={9}
               className={serviceType === "traslado" ? "brightness-200" : "opacity-60"}
@@ -508,7 +515,8 @@ export function HeroQuoteForm({ dict }: HeroQuoteFormProps) {
             <span className="flex items-center gap-2">
               <Image
                 src="/valet_parking_btn_icon.svg"
-                alt="Valet"
+                alt=""
+                aria-hidden="true"
                 width={10}
                 height={12}
                 className={serviceType === "valet" ? "brightness-200" : "opacity-60"}

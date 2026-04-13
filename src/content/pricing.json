@@ -42,7 +42,7 @@
       "aeroparque_por_dia": 60000
     },
     "additionalServices": {
-      "valet_standard": 25000,
+      "valet_standard": 20000,
       "valet_combinado": 90000
     }
   }

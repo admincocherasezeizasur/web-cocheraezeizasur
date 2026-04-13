@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { interpolate, pricingVars } from "@/lib/interpolate";
+import { siteConfig } from "@/content/config";
 
 const MODALIDADES_IMAGES = [
   "/images/diversas_modalidades_img_card-01.webp",
@@ -19,6 +20,7 @@ interface ModalidadCard {
   image: string;
   priceIcon: string;
   popular: boolean;
+  isCruceros: boolean;
 }
 
 export function ModalidadesSection({ dict }: { dict: any }) {
@@ -27,7 +29,10 @@ export function ModalidadesSection({ dict }: { dict: any }) {
     image: MODALIDADES_IMAGES[i],
     priceIcon: MODALIDADES_ICONS[i],
     popular: i === 1,
+    isCruceros: i === 2,
   })) || [];
+
+  const crucerosWhatsapp = `https://wa.me/${siteConfig.contact.whatsappNumber}?text=${encodeURIComponent(siteConfig.whatsappMessages.cruceros)}`;
   return (
     <section id="tarifas" className="py-20 bg-brand-dark">
       <div className="max-w-7xl mx-auto px-6">
@@ -65,11 +70,11 @@ export function ModalidadesSection({ dict }: { dict: any }) {
                 />
               </div>
               {/* Content */}
-              <div className="p-8 flex flex-col flex-grow">
-                <h4 className="text-xl font-bold text-white tracking-wide mb-6">
+              <div className="p-8 flex flex-col grow">
+                <h3 className="text-xl font-bold text-white tracking-wide mb-6">
                   {m.title}
-                </h4>
-                <ul className="space-y-4 mb-8 flex-grow">
+                </h3>
+                <ul className="space-y-4 mb-8 grow">
                   {m.features.map((f) => (
                     <li key={f} className="flex items-start gap-3 text-sm text-[#E7BCBA] font-medium">
                       <Image
@@ -84,13 +89,25 @@ export function ModalidadesSection({ dict }: { dict: any }) {
                   ))}
                 </ul>
                 <div className="border-t border-white/10 pt-5 mt-auto">
-                  <a
-                    href="#inicio"
-                    className="flex items-center gap-3 text-sm font-bold text-white hover:text-brand-red transition-colors"
-                  >
-                    <Image src={m.priceIcon} alt="icon" width={20} height={20} className="w-5 h-5 shrink-0 brightness-0 invert" />
-                    {interpolate(m.price, pricingVars)} →
-                  </a>
+                  {m.isCruceros ? (
+                    <a
+                      href={crucerosWhatsapp}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-3 text-sm font-bold text-brand-whatsapp hover:text-white transition-colors"
+                    >
+                      <Image src="/whatsapp-fill-icon.svg" alt="WhatsApp" width={20} height={20} className="w-5 h-5 shrink-0" />
+                      {dict.modalidades?.consultText || "Consultar servicio"} →
+                    </a>
+                  ) : (
+                    <a
+                      href="#inicio"
+                      className="flex items-center gap-3 text-sm font-bold text-white hover:text-brand-red transition-colors"
+                    >
+                      <Image src={m.priceIcon} alt="icon" width={20} height={20} className="w-5 h-5 shrink-0 brightness-0 invert" />
+                      {interpolate(m.price, pricingVars)} →
+                    </a>
+                  )}
                 </div>
               </div>
             </div>

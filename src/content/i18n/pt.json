@@ -16,8 +16,8 @@
     "feature2_title": "TEMPOS DE\nESPERA\nFLEXÍVEIS.",
     "feature3_title": "VIGILÂNCIA 24H.",
     "cta_quote": "SOLICITAR ORÇAMENTO",
-    "form_fecha_ingreso": "DATA DE ENTRADA",
-    "form_fecha_egreso": "DATA DE SAÍDA",
+    "form_fecha_ingreso": "DATA E HORA DE ENTRADA",
+    "form_fecha_egreso": "DATA E HORA DE SAÍDA",
     "form_nota_hora": "* Importante: O horário informado deve ser o horário de partida do seu voo. Os horários são contabilizados a partir do horário de entrada em blocos de 24h.",
     "form_aeropuerto_label": "AEROPORTO DE EMBARQUE E DESEMBARQUE?",
     "form_aeropuerto_ezeiza": "EZEIZA",
@@ -57,7 +57,8 @@
   "notification_bar": [
     "VOOS NACIONAIS: APRESENTAR-SE 2 ½ HS ANTES DO VOO.",
     "VOOS INTERNACIONAIS: APRESENTAR-SE 3 ½ HS ANTES DO VOO.",
-    "REGISTRO: VÁLIDO APENAS COM RG/PASSAPORTE."
+    "UMA RESERVA POR VEÍCULO E/OU RG.",
+    "A COCHERAS EZEIZA SUR NÃO SE RESPONSABILIZA PELO DESCUMPRIMENTO DESTES HORÁRIOS."
   ],
   "experiencia": {
     "title": "A EXPERIÊNCIA QUE OFERECEMOS",
@@ -200,11 +201,11 @@
       },
       {
         "q": "COMO E QUANDO DEVO PAGAR?",
-        "a": "Você pode pagar na entrada ou na saída, como preferir. Aceitamos dinheiro em pesos, transferência bancária e Mercado Pago. Sem taxa adicional pelo método de pagamento."
+        "a": "Você pode pagar na entrada ou na saída, como preferir. Aceitamos dinheiro em pesos, transferência bancária e Mercado Pago."
       },
       {
         "q": "O QUE ACONTECE SE MEU VOO ATRASAR OU MUDAR?",
-        "a": "Sem problema! É só nos avisar pelo WhatsApp e ajustamos o horário sem custo adicional. Operamos 24 horas por dia, 365 dias por ano."
+        "a": "Sem problema! É só nos avisar pelo WhatsApp e ajustamos o horário. Operamos 24 horas por dia, 365 dias por ano."
       },
       {
         "q": "QUANTAS PESSOAS O TRANSLADO INCLUI?",

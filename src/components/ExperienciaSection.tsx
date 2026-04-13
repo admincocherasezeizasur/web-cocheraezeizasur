@@ -61,7 +61,7 @@ export function ExperienciaSection({ dict }: { dict: any }) {
                   src={item.image}
                   alt={item.title}
                   fill
-                  className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105"
+                  className="object-cover sm:grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-black/20" />
               </div>

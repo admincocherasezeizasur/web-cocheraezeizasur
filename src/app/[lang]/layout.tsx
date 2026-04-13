@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "../globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { getDictionary, hasLocale, locales, type Locale } from "./dictionaries";
 import { notFound } from "next/navigation";
 import { Inter, Space_Grotesk } from "next/font/google";
@@ -22,36 +23,73 @@ export async function generateStaticParams() {
   return locales.map((lang) => ({ lang }));
 }
 
+const BASE_URL = "https://www.cocherasezeizasur.com";
+
+const seoTitles: Record<string, string> = {
+  es: "Cocheras Ezeiza Sur | Estacionamiento con Traslado Gratis al Aeropuerto",
+  en: "Cocheras Ezeiza Sur | Parking with Free Shuttle to Ezeiza Airport",
+  pt: "Cocheras Ezeiza Sur | Estacionamento com Transfer Grátis para o Aeroporto",
+};
+
+const seoDescriptions: Record<string, string> = {
+  es: "Cocheras 100% techadas a minutos del aeropuerto de Ezeiza. Vigilancia 24hs, traslado gratuito y las mejores tarifas. ¡Cotizá tu estadía ahora!",
+  en: "100% covered garages minutes from Ezeiza Airport. 24/7 surveillance, free shuttle, and the best rates. Get your free quote now!",
+  pt: "Garagens 100% cobertas a minutos do aeroporto de Ezeiza. Vigilância 24h, translado gratuito e as melhores tarifas. Faça sua cotação agora!",
+};
+
+const ogLocales: Record<string, string> = {
+  es: "es_AR",
+  en: "en_US",
+  pt: "pt_BR",
+};
+
 export async function generateMetadata({
   params,
 }: {
   params: Promise<{ lang: string }>;
 }): Promise<Metadata> {
   const { lang } = await params;
-  const titles: Record<string, string> = {
-    es: "Cocheras Ezeiza Sur — Estacionamiento seguro cerca de Ezeiza",
-    en: "Cocheras Ezeiza Sur — Secure parking near Ezeiza Airport",
-    pt: "Cocheras Ezeiza Sur — Estacionamento seguro perto de Ezeiza",
-  };
-  const descriptions: Record<string, string> = {
-    es: "Cocheras 100% techadas a minutos del aeropuerto de Ezeiza. Vigilancia 24hs, traslado gratuito y las mejores tarifas.",
-    en: "100% covered garages minutes from Ezeiza Airport. 24/7 surveillance, free shuttle, and the best rates.",
-    pt: "Garagens 100% cobertas a minutos do aeroporto de Ezeiza. Vigilância 24h, translado gratuito e as melhores tarifas.",
-  };
+  const title = seoTitles[lang] ?? seoTitles.es;
+  const description = seoDescriptions[lang] ?? seoDescriptions.es;
+  const url = `${BASE_URL}/${lang}`;
 
   return {
-    title: titles[lang] || titles.es,
-    description: descriptions[lang] || descriptions.es,
+    metadataBase: new URL(BASE_URL),
+    title,
+    description,
     icons: {
       icon: "/images/logo-cocheras-ezeiza-sur.webp",
     },
     alternates: {
-      canonical: `https://www.cocherasezeizasur.com/${lang}`,
+      canonical: url,
       languages: {
-        es: "https://www.cocherasezeizasur.com/es",
-        en: "https://www.cocherasezeizasur.com/en",
-        pt: "https://www.cocherasezeizasur.com/pt",
+        es: `${BASE_URL}/es`,
+        en: `${BASE_URL}/en`,
+        pt: `${BASE_URL}/pt`,
+        "x-default": `${BASE_URL}/es`,
       },
+    },
+    openGraph: {
+      type: "website",
+      url,
+      title,
+      description,
+      siteName: "Cocheras Ezeiza Sur",
+      locale: ogLocales[lang] ?? "es_AR",
+      images: [
+        {
+          url: "/images/Hero-Image-Background.webp",
+          width: 1200,
+          height: 630,
+          alt: "Cocheras Ezeiza Sur — Estacionamiento techado cerca del Aeropuerto de Ezeiza",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: ["/images/Hero-Image-Background.webp"],
     },
   };
 }
@@ -75,6 +113,7 @@ export default async function LangLayout({
         <Navbar lang={lang as Locale} dict={dict} />
         <main className="flex-1">{children}</main>
         <Footer dict={dict} lang={lang} />
+        <WhatsAppFloat />
       </body>
     </html>
   );
