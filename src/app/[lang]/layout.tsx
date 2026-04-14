@@ -6,6 +6,7 @@ import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { getDictionary, hasLocale, locales, type Locale } from "./dictionaries";
 import { notFound } from "next/navigation";
 import { Inter, Space_Grotesk } from "next/font/google";
+import { GoogleTagManager } from '@next/third-parties/google';
 
 const inter = Inter({
   subsets: ["latin"],
@@ -110,6 +111,7 @@ export default async function LangLayout({
   return (
     <html lang={lang} className={`${inter.variable} ${spaceGrotesk.variable}`} suppressHydrationWarning>
       <body className="min-h-screen flex flex-col" suppressHydrationWarning>
+        <GoogleTagManager gtmId="GTM-W5GNTWWG" />
         <Navbar lang={lang as Locale} dict={dict} />
         <main className="flex-1">{children}</main>
         <Footer dict={dict} lang={lang} />

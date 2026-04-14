@@ -91,6 +91,7 @@ export function ModalidadesSection({ dict }: { dict: any }) {
                 <div className="border-t border-white/10 pt-5 mt-auto">
                   {m.isCruceros ? (
                     <a
+                      id="cta-consultar-cruceros"
                       href={crucerosWhatsapp}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -101,6 +102,7 @@ export function ModalidadesSection({ dict }: { dict: any }) {
                     </a>
                   ) : (
                     <a
+                      id="cta-ver-tarifas"
                       href="#inicio"
                       className="flex items-center gap-3 text-sm font-bold text-white hover:text-brand-red transition-colors"
                     >

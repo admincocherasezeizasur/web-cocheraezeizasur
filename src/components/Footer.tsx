@@ -14,15 +14,15 @@ export function Footer({ dict, lang = "es" }: { dict?: any; lang?: string }) {
               Cocheras Ezeiza Sur
             </h2>
             <div className="space-y-3">
-              <a href={siteConfig.contact.googleMapsUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-[13px] text-gray-400 hover:text-white transition-colors cursor-pointer">
+              <a id="cta-como-llegar-footer" href={siteConfig.contact.googleMapsUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-[13px] text-gray-400 hover:text-white transition-colors cursor-pointer">
                 <Icon icon="mdi:map-marker-outline" className="w-4 h-4" />
                 {siteConfig.contact.address}
               </a>
-              <a href={`https://wa.me/${siteConfig.contact.whatsappNumber}?text=${encodeURIComponent(dict?.nav?.contacto_whatsappMessage || "Hola! Me contacto desde su página web, quiero más información.")}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-[13px] text-gray-400 hover:text-white transition-colors cursor-pointer">
+              <a id="cta-whatsapp-footer" href={`https://wa.me/${siteConfig.contact.whatsappNumber}?text=${encodeURIComponent(dict?.nav?.contacto_whatsappMessage || "Hola! Me contacto desde su página web, quiero más información.")}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-[13px] text-gray-400 hover:text-white transition-colors cursor-pointer">
                 <Icon icon="mdi:phone-outline" className="w-4 h-4" />
                 {siteConfig.contact.phoneDisplay}
               </a>
-              <a href={`mailto:${siteConfig.contact.email}`} className="flex items-center gap-3 text-[13px] text-gray-400 hover:text-white transition-colors cursor-pointer">
+              <a id="cta-email-contacto" href={`mailto:${siteConfig.contact.email}`} className="flex items-center gap-3 text-[13px] text-gray-400 hover:text-white transition-colors cursor-pointer">
                 <Icon icon="mdi:email-outline" className="w-4 h-4" />
                 {siteConfig.contact.email}
               </a>
@@ -47,6 +47,7 @@ export function Footer({ dict, lang = "es" }: { dict?: any; lang?: string }) {
           {/* Right: Social Box */}
           <div className="flex gap-4">
             <a
+              id="cta-instagram-outbound"
               href={siteConfig.contact.instagramUrl}
               target="_blank"
               rel="noopener noreferrer"

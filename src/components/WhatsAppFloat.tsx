@@ -8,6 +8,7 @@ export function WhatsAppFloat() {
 
   return (
     <a
+      id="cta-whatsapp-flotante"
       href={href}
       target="_blank"
       rel="noopener noreferrer"

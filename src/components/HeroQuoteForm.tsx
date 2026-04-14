@@ -235,6 +235,14 @@ export function HeroQuoteForm({ dict }: HeroQuoteFormProps) {
       `💰 *Total Cotizado:* ${formatCurrency(quote.total)}\n\n` +
       `Aguardan mi confirmación.`;
 
+    (window as any).dataLayer = (window as any).dataLayer || [];
+    (window as any).dataLayer.push({
+      event: 'lead_cotizador_whatsapp',
+      lead_type: 'reserva',
+      value: quote.total,
+      currency: 'ARS'
+    });
+
     window.open(
       `https://wa.me/${siteConfig.contact.whatsappNumber}?text=${encodeURIComponent(message)}`,
       "_blank"
@@ -337,6 +345,7 @@ export function HeroQuoteForm({ dict }: HeroQuoteFormProps) {
 
           {/* WhatsApp CTA */}
           <button
+            id="cta-confirmar-cotizacion"
             onClick={handleWhatsApp}
             className="w-full shimmer-btn bg-brand-whatsapp hover:bg-brand-whatsapp/85 text-white font-bold text-sm tracking-widest py-4 rounded-xl transition-all duration-300 hover:shadow-[0_0_15px_rgba(37,211,102,0.4)] hover:border-[#25D366]/50 active:scale-[0.98] flex items-center justify-center gap-3 border border-transparent"
           >
@@ -531,6 +540,7 @@ export function HeroQuoteForm({ dict }: HeroQuoteFormProps) {
 
         {/* CTA */}
         <button
+          id="cta-cotizador"
           onClick={handleCotizar}
           className="w-full mt-2 shimmer-btn neon-glow bg-brand-red hover:bg-brand-red-hover text-white font-bold text-sm tracking-[0.2em] py-4 rounded-xl transition-all duration-300 active:scale-[0.98] uppercase border border-transparent"
         >

@@ -70,6 +70,7 @@ export function Navbar({ lang, dict }: NavbarProps) {
           {siteConfig.navLinks.map((link) => (
             <a
               key={link.key}
+              id={`cta-nav-${link.anchor}`}
               href={`/${lang}#${link.anchor}`}
               className="relative text-sm font-medium tracking-widest text-white/80 transition-colors duration-200 hover:text-brand-red"
             >
@@ -81,6 +82,7 @@ export function Navbar({ lang, dict }: NavbarProps) {
         {/* Right: CONTACTO + Language Selector + Hamburger */}
         <div className="flex items-center gap-3">
           <a
+            id="cta-whatsapp-navbar-desktop"
             href={whatsappHref}
             target="_blank"
             rel="noopener noreferrer"
@@ -152,6 +154,7 @@ export function Navbar({ lang, dict }: NavbarProps) {
 
             {/* WhatsApp CTA */}
             <a
+              id="cta-whatsapp-navbar-mobile"
               href={whatsappHref}
               target="_blank"
               rel="noopener noreferrer"
