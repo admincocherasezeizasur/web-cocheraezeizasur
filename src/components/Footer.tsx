@@ -16,7 +16,7 @@ export function Footer({ dict, lang = "es" }: { dict?: any; lang?: string }) {
             <div className="space-y-3">
               <a id="cta-como-llegar-footer" href={siteConfig.contact.googleMapsUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-[13px] text-gray-400 hover:text-white transition-colors cursor-pointer">
                 <Icon icon="mdi:map-marker-outline" className="w-4 h-4" />
-                {siteConfig.contact.address}
+                {siteConfig.contact[`address_${(lang as "es"|"en"|"pt")}`] || siteConfig.contact.address_es}
               </a>
               <a id="cta-whatsapp-footer" href={`https://wa.me/${siteConfig.contact.whatsappNumber}?text=${encodeURIComponent(dict?.nav?.contacto_whatsappMessage || "Hola! Me contacto desde su página web, quiero más información.")}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-[13px] text-gray-400 hover:text-white transition-colors cursor-pointer">
                 <Icon icon="mdi:phone-outline" className="w-4 h-4" />

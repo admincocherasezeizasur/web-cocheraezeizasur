@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { interpolate, pricingVars } from "@/lib/interpolate";
+import { interpolate, getPricingVars } from "@/lib/interpolate";
 
 const TRASLADO_IMAGES = [
   "/images/nuestros_servicios_traslado_img_card-01.webp",
@@ -56,7 +56,7 @@ function ServiceCard({
   );
 }
 
-export function ServiciosSection({ dict }: { dict: any }) {
+export function ServiciosSection({ dict, lang }: { dict: any; lang: string }) {
   const trasladoSteps = dict.servicios?.trasladoSteps?.map((s: any, i: number) => ({
     ...s,
     number: i + 1,
@@ -112,7 +112,7 @@ export function ServiciosSection({ dict }: { dict: any }) {
           <div className="mt-12 text-center text-[13px] text-[#E7BCBA] font-medium tracking-wide">
             <span className="inline-block mb-1">{dict.servicios?.extraCostsTitle || "⚠️ Costos Adicionales del Servicio:"}</span>
             <br />
-            <span className="inline-block">{interpolate(dict.servicios?.extraCostsDesc || "", pricingVars)}</span>
+            <span className="inline-block">{interpolate(dict.servicios?.extraCostsDesc || "", getPricingVars(lang))}</span>
           </div>
         </div>
       </div>

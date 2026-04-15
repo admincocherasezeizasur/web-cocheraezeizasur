@@ -8,10 +8,10 @@
     "contacto_whatsappMessage": "Hi! I'm contacting you from your website, I would like more information."
   },
   "hero": {
-    "title_line1": "Your car",
-    "title_highlight": "secure",
-    "title_line2": ", your trip peaceful.",
-    "subtitle": "100% covered garages strategically located minutes from Ezeiza Airport. Maximum security for your vehicle while you enjoy your destination.",
+    "title_line1": "Keep",
+    "title_highlight": "your car secure",
+    "title_line2": ", enjoy a peaceful trip.",
+    "subtitle": "100% covered parking strategically located minutes from Ezeiza Airport. Maximum security for your vehicle while you enjoy your destination.",
     "feature1_title": "FLEXIBLE\nCANCELLATION,\nNO EXTRA COST.",
     "feature2_title": "FLEXIBLE\nWAIT\nTIMES.",
     "feature3_title": "24/7 SURVEILLANCE.",
@@ -55,10 +55,10 @@
     "pt": "PT"
   },
   "notification_bar": [
-    "DOMESTIC FLIGHTS: ARRIVE 2 ½ HRS BEFORE DEPARTURE.",
-    "INTERNATIONAL FLIGHTS: ARRIVE 3 ½ HRS BEFORE DEPARTURE.",
+    "DOMESTIC FLIGHTS: ARRIVE 2h 30m BEFORE DEPARTURE.",
+    "INTERNATIONAL FLIGHTS: ARRIVE 3h 30m BEFORE DEPARTURE.",
     "ONE RESERVATION PER VEHICLE AND/OR ID.",
-    "COCHERAS EZEIZA SUR IS NOT RESPONSIBLE FOR NON-COMPLIANCE WITH THESE SCHEDULES."
+    "COCHERAS EZEIZA SUR IS NOT RESPONSIBLE FOR MISSED SCHEDULES."
   ],
   "experiencia": {
     "title": "THE EXPERIENCE WE OFFER",
@@ -67,11 +67,11 @@
     "card2_title": "24/7 SECURITY & MONITORING",
     "card2_desc": "Premises guarded 24 hours a day with constant monitoring via closed-circuit cameras. Travel with complete peace of mind.",
     "card3_title": "SHUTTLE INCLUDED",
-    "card3_desc": "We take up to 4 people to the airport immediately in our vehicle. Service included in your rate, with no hidden costs.",
+    "card3_desc": "We take up to 4 people to the airport right away in our vehicle. Service included in your rate, with no hidden costs.",
     "card4_title": "BASIC ROADSIDE ASSISTANCE",
     "card4_desc": "An unexpected issue upon return? We provide free assistance with tire inflation or a battery jump-start so you can leave stress-free.",
     "card5_title": "10+ YEARS OF EXPERIENCE",
-    "card5_desc": "We are a family business, attended directly by its owners. We guarantee warm and personalized treatment for every passenger.",
+    "card5_desc": "We are a family business, run directly by its owners. We guarantee warm and personalized treatment for every passenger.",
     "card6_title": "FLEXIBLE CANCELLATION",
     "card6_desc": "We understand that flights and plans can change. You can cancel or modify your reservation at any time at no additional cost.",
     "cta_title": "Save up to 40% vs EZE.",
@@ -80,43 +80,43 @@
     "cta_whatsappMessage": "Hi, I'm coming from the website. I would like to take advantage of the 40% promotion."
   },
   "servicios": {
-    "title": "Our Main Services",
+    "title": "Our Core Services",
     "traslado": "SHUTTLE:",
     "valet": "VALET PARKING:",
     "trasladoSteps": [
       {
         "title": "1. FAST CHECK-IN",
-        "desc": "Leave your car. We instantly register your details and flight for complete control and security."
+        "desc": "Drop off your car. We instantly register your details and flight for complete control and security."
       },
       {
         "title": "2. DIRECT SHUTTLE",
-        "desc": "We take you in our vehicle (up to 4 passengers). Guaranteed space for your group and luggage."
+        "desc": "We´ll drive you in our shuttle (up to 4 passengers). Guaranteed space for your group and luggage."
       },
       {
-        "title": "3. AGILE RETURN",
-        "desc": "Upon landing, contact us via WhatsApp and we will agree on the meeting point!"
+        "title": "3. QUICK RETURN",
+        "desc": "Upon landing, contact us via WhatsApp and we´ll coordinate the meeting point!"
       }
     ],
     "valetSteps": [
       {
-        "title": "1. TERMINAL RECEPTION",
-        "desc": "Go straight to the airport (Ezeiza or Aeroparque). Hand us your car at the door and go to your flight without delays."
+        "title": "1. TERMINAL DROP OFF",
+        "desc": "Go straight to the airport (Ezeiza or Aeroparque). Leave your car with us at the door and go to your flight without delays."
       },
       {
-        "title": "2. SECURE SHELTER",
+        "title": "2. SECURE PARKING",
         "desc": "We take care of transporting your vehicle and storing it in our 100% covered garages while you travel."
       },
       {
         "title": "3. DELIVERY UPON LANDING",
-        "desc": "When you return, we will be waiting with your car at the arrivals door ready for you to go home."
+        "desc": "When you return, we will be waiting with your car at arrivals ready for you to go home."
       }
     ],
     "extraCostsTitle": "⚠️ Additional Service Costs:",
     "extraCostsDesc": "+ {valet_standard} (Pickup and delivery at Ezeiza). + {valet_combinado} (Combined: e.g., Pickup at EZE and delivery at AEP, or vice versa)."
   },
   "modalidades": {
-    "title": "Various Modalities",
-    "subtitle": "Choose the modality that best suits your trip. Absolute comfort at every step.",
+    "title": "Choose your plan",
+    "subtitle": "Choose the option that best suits your trip. Absolute comfort at every step.",
     "popularBadge": "MOST POPULAR",
     "consultText": "Inquire about service",
     "cards": [
@@ -148,23 +148,23 @@
     ]
   },
   "identidad": {
-    "title": "OUR IDENTITY",
+    "title": "WHO WE ARE?",
     "card1_title": "PREMIUM EXPERIENCE & SECURITY",
-    "card1_desc": "We design a maximum protection environment for your assets. Our facilities feature 100% enclosed garages with walls and roofs, ensuring absolute shelter from climatic factors.",
+    "card1_desc": "We design a maximum protection environment for your assets. Our facilities feature 100% enclosed garages with walls and roofs, ensuring absolute protection from weather elements.",
     "card1_feat1_title": "ACTIVE MONITORING",
     "card1_feat1_desc": "Professional 24/7 surveillance with high-definition camera systems.",
     "card1_feat2_title": "IMMEDIATE SHUTTLE",
     "card1_feat2_desc": "Synchronized logistics for terminal transfers with no waiting times.",
     "card2_title": "OUR TRACK RECORD",
     "card2_desc": "We are a family business with over 10 years of experience in the airport sector. Our philosophy is based on direct interaction and operational excellence.",
-    "card2_feat1_title": "ATTENDED BY OWNERS",
+    "card2_feat1_title": "OWNER-OPERATED",
     "card2_feat1_desc": "We guarantee a personalized and decisive approach in every interaction.",
-    "card2_feat2_title": "DIFFERENTIAL VALET PARKING",
+    "card2_feat2_title": "PREMIUM VALET PARKING",
     "card2_feat2_desc": "Exclusive reception and delivery service designed for the frequent traveler."
   },
   "testimonios": {
     "title": "TESTIMONIALS",
-    "subtitle": "What those who already trust their vehicle in our hands say.",
+    "subtitle": "What those who already entrust their vehicle to us have to say.",
     "cards": [
       {
         "initials": "RM",
@@ -175,14 +175,14 @@
       {
         "initials": "LS",
         "name": "LAURA SÍVORI",
-        "role": "PRIVATE CLIENT",
+        "role": "CUSTOMER",
         "text": "\"Security is my priority and here I slept peacefully. Truly enclosed garages and the shuttle to the terminal was immediate. I didn't even wait 5 minutes.\""
       },
       {
         "initials": "JP",
         "name": "JUAN PABLO FERRO",
         "role": "BUSINESS TRIP",
-        "text": "\"Excellent price-quality ratio. The savings compared to official parking are remarkable and the service is much more personalized. I recommend it 100%.\""
+        "text": "\"Great value for money. The savings compared to official parking are significant and the service is much more personalized. I recommend it 100%.\""
       }
     ]
   },
@@ -213,7 +213,7 @@
       },
       {
         "q": "CAN I CANCEL MY RESERVATION?",
-        "a": "Yes, you can cancel anytime and at no cost whatsoever. No penalties, no holds. Just let us know via WhatsApp."
+        "a": "Yes, you can cancel anytime and at no cost whatsoever. No penalties, no cancellation fees. Just let us know via WhatsApp."
       }
     ]
   },

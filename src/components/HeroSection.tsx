@@ -62,7 +62,7 @@ const features = [
   },
 ];
 
-export function HeroSection({ dict }: HeroProps) {
+export function HeroSection({ dict, lang }: HeroProps) {
   return (
     <section
       id="inicio"
@@ -129,7 +129,7 @@ export function HeroSection({ dict }: HeroProps) {
 
           {/* Right Column — Quote Form */}
           <div className="flex justify-center lg:justify-center">
-            <HeroQuoteForm dict={dict.hero} />
+            <HeroQuoteForm dict={dict.hero} lang={lang} />
           </div>
         </div>
       </div>

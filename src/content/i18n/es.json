@@ -13,7 +13,7 @@
     "title_line2": ", tu viaje tranquilo.",
     "subtitle": "Cocheras 100% techadas situadas estratégicamente a minutos de Ezeiza. Máxima seguridad para tu vehículo mientras disfrutás de tu destino.",
     "feature1_title": "CANCELACIÓN\nFLEXIBLE, SIN COSTO\nADICIONAL.",
-    "feature2_title": "TIEMPOS DE\nESPERAS\nFLEXIBLES.",
+    "feature2_title": "TIEMPOS DE\nESPERA\nFLEXIBLES.",
     "feature3_title": "VIGILANCIA 24HS.",
     "cta_quote": "COTIZÁ TU ESTADÍA",
     "form_fecha_ingreso": "FECHA Y HORA DE INGRESO",
@@ -55,14 +55,14 @@
     "pt": "PT"
   },
   "notification_bar": [
-    "VUELOS NACIONALES: PRESENTARSE 2 ½ HS ANTES DEL VUELO.",
-    "VUELOS INTERNACIONALES: PRESENTARSE 3 ½ HS ANTES DEL VUELO.",
+    "VUELOS NACIONALES: PRESENTARSE 2hs 30m ANTES DEL VUELO.",
+    "VUELOS INTERNACIONALES: PRESENTARSE 3hs 30m ANTES DEL VUELO.",
     "UNA RESERVA POR VEHÍCULO Y/O DNI.",
     "COCHERAS EZEIZA SUR NO SE RESPONSABILIZA POR EL INCUMPLIMIENTO DE ESTOS HORARIOS."
   ],
   "experiencia": {
     "title": "LA EXPERIENCIA QUE OFRECEMOS",
-    "card1_title": "COCHERRAS 100% CERRADAS",
+    "card1_title": "COCHERAS 100% CERRADAS",
     "card1_desc": "Estructura totalmente cerrada. Su vehículo queda resguardado de granizos y sol intenso en nuestras cocheras techadas.",
     "card2_title": "SEGURIDAD Y MONITOREO 24/7",
     "card2_desc": "Predio custodiado las 24 horas y monitoreo constante por circuito cerrado de cámaras. Viajá con absoluta tranquilidad.",
@@ -176,7 +176,7 @@
         "initials": "LS",
         "name": "LAURA SÍVORI",
         "role": "CLIENTE PARTICULAR",
-        "text": "\"La seguridad es mi prioridad y acá dormí tranquilo. Cocheras cerradas de verdad y el traslado a la terminal fue inmediato. No esperé ni 5 minutos.\""
+        "text": "\"La seguridad es mi prioridad y acá dormí tranquila. Cocheras cerradas de verdad y el traslado a la terminal fue inmediato. No esperé ni 5 minutos.\""
       },
       {
         "initials": "JP",

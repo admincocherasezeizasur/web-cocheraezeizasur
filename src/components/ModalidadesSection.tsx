@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { interpolate, pricingVars } from "@/lib/interpolate";
+import { interpolate, getPricingVars } from "@/lib/interpolate";
 import { siteConfig } from "@/content/config";
 
 const MODALIDADES_IMAGES = [
@@ -23,7 +23,7 @@ interface ModalidadCard {
   isCruceros: boolean;
 }
 
-export function ModalidadesSection({ dict }: { dict: any }) {
+export function ModalidadesSection({ dict, lang }: { dict: any; lang: string }) {
   const modalidades: ModalidadCard[] = dict.modalidades?.cards?.map((c: any, i: number) => ({
     ...c,
     image: MODALIDADES_IMAGES[i],
@@ -107,7 +107,7 @@ export function ModalidadesSection({ dict }: { dict: any }) {
                       className="flex items-center gap-3 text-sm font-bold text-white hover:text-brand-red transition-colors"
                     >
                       <Image src={m.priceIcon} alt="icon" width={20} height={20} className="w-5 h-5 shrink-0 brightness-0 invert" />
-                      {interpolate(m.price, pricingVars)} →
+                      {interpolate(m.price, getPricingVars(lang))} →
                     </a>
                   )}
                 </div>

@@ -2,7 +2,8 @@ import Image from "next/image";
 import { Icon } from "@iconify/react";
 import { siteConfig } from "@/content/config";
 
-export function UbicacionSection({ dict }: { dict: any }) {
+export function UbicacionSection({ dict, lang = "es" }: { dict: any; lang?: string }) {
+  const address = siteConfig.contact[`address_${lang as "es"|"en"|"pt"}`] || siteConfig.contact.address_es;
   return (
     <section id="ubicacion" className="py-20 bg-brand-dark">
       <div className="max-w-7xl mx-auto px-6">
@@ -32,7 +33,7 @@ export function UbicacionSection({ dict }: { dict: any }) {
                 {dict.ubicacion?.title || "UBICACIÓN ESTRATÉGICA"}
               </h3>
               <p className="text-[13px] text-[#A59F9F] mb-6 font-medium tracking-wide">
-                {siteConfig.contact.address}
+                {address}
               </p>
               <a
                 href={siteConfig.contact.googleMapsUrl}

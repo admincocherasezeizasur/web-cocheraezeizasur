@@ -28,7 +28,7 @@
     "form_tipo_vehiculo_label": "TIPO DE VEÍCULO",
     "form_traslado": "TRANSLADO",
     "form_valet": "VALET PARKING",
-    "form_cotizar": "ORÇAR",
+    "form_cotizar": "SIMULAR",
     "result_title": "RESUMO DO SEU ORÇAMENTO",
     "result_estadia": "ESTADIA",
     "result_vehiculo": "VEÍCULO",
@@ -55,8 +55,8 @@
     "pt": "PT"
   },
   "notification_bar": [
-    "VOOS NACIONAIS: APRESENTAR-SE 2 ½ HS ANTES DO VOO.",
-    "VOOS INTERNACIONAIS: APRESENTAR-SE 3 ½ HS ANTES DO VOO.",
+    "VOOS NACIONAIS: APRESENTAR-SE 2h 30min ANTES DO VOO.",
+    "VOOS INTERNACIONAIS: APRESENTAR-SE 3h 30min ANTES DO VOO.",
     "UMA RESERVA POR VEÍCULO E/OU RG.",
     "A COCHERAS EZEIZA SUR NÃO SE RESPONSABILIZA PELO DESCUMPRIMENTO DESTES HORÁRIOS."
   ],
@@ -69,9 +69,9 @@
     "card3_title": "TRANSLADO INCLUÍDO",
     "card3_desc": "Levamos até 4 pessoas ao aeroporto imediatamente no nosso veículo. Serviço incluído na sua tarifa, sem custos ocultos.",
     "card4_title": "ASSISTÊNCIA MECÂNICA BÁSICA",
-    "card4_desc": "Um imprevisto no retorno? Oferecemos assistência gratuita com enchimento de pneus ou chupeta de bateria para você arrancar sem estresse.",
+    "card4_desc": "Um imprevisto no retorno? Oferecemos assistência gratuita com calibragem de pneus ou chupeta de bateria para você arrancar sem estresse.",
     "card5_title": "+10 ANOS DE EXPERIÊNCIA",
-    "card5_desc": "Somos uma empresa familiar, atendida diretamente pelos donos. Garantimos um tratamento caloroso e personalizado para cada passageiro.",
+    "card5_desc": "Somos uma empresa familiar, atendida diretamente pelos donos. Garantimos um atendimento caloroso e personalizado para cada passageiro.",
     "card6_title": "CANCELAMENTO FLEXÍVEL",
     "card6_desc": "Entendemos que voos e planos podem mudar. Você pode cancelar ou modificar sua reserva a qualquer momento sem custo adicional.",
     "cta_title": "Economize até 40% vs EZE.",
@@ -99,12 +99,12 @@
     ],
     "valetSteps": [
       {
-        "title": "1. RECEPÇÃO NA BASE",
+        "title": "1. RECEPÇÃO NO TERMINAL",
         "desc": "Vá direto para o aeroporto (Ezeiza ou Aeroparque). Entregue seu carro na porta e vá para seu voo sem atrasos."
       },
       {
         "title": "2. ABRIGO SEGURO",
-        "desc": "Cuidamos de transportar seu veículo e armazená-lo em nossas garagens 100% cobertas enquanto você viaja."
+        "desc": "Cuidamos de transportar seu veículo e guardá-lo em nossas garagens 100% cobertas enquanto você viaja."
       },
       {
         "title": "3. ENTREGA NO DESEMBARQUE",
@@ -148,9 +148,9 @@
     ]
   },
   "identidad": {
-    "title": "NOSSA IDENTIDADE",
+    "title": "QUEM SOMOS",
     "card1_title": "EXPERIÊNCIA E SEGURANÇA PREMIUM",
-    "card1_desc": "Projetamos um ambiente de proteção máxima para seu patrimônio. Nossas instalações possuem garagens 100% fechadas com paredes e tetos, garantindo proteção absoluta contra fatores climáticos.",
+    "card1_desc": "Projetamos um ambiente de proteção máxima para seu patrimônio. Nossas instalações possuem vagas 100% cobertas e fechadas, garantindo proteção absoluta contra as intempéries.",
     "card1_feat1_title": "MONITORAMENTO ATIVO",
     "card1_feat1_desc": "Vigilância profissional 24h com sistemas de câmeras de alta definição.",
     "card1_feat2_title": "TRANSLADO IMEDIATO",
@@ -176,13 +176,13 @@
         "initials": "LS",
         "name": "LAURA SÍVORI",
         "role": "CLIENTE PARTICULAR",
-        "text": "\"A segurança é a minha prioridade e aqui dormi descansado. Garagens verdadeiramente fechadas e o translado para o terminal foi imediato. Não esperei nem 5 minutos.\""
+        "text": "\"A segurança é a minha prioridade e aqui dormi descansada. Garagens verdadeiramente fechadas e o translado para o terminal foi imediato. Não esperei nem 5 minutos.\""
       },
       {
         "initials": "JP",
         "name": "JUAN PABLO FERRO",
         "role": "VIAGEM DE NEGÓCIOS",
-        "text": "\"Excelente relação preço-qualidade. A poupança em relação ao estacionamento oficial é notável e o serviço é muito mais personalizado. Recomendo a 100%.\""
+        "text": "\"Excelente relação custo-benefício. A economia em relação ao estacionamento oficial é notável e o serviço é muito mais personalizado. Recomendo a 100%.\""
       }
     ]
   },
@@ -209,7 +209,7 @@
       },
       {
         "q": "QUANTAS PESSOAS O TRANSLADO INCLUI?",
-        "a": "O translado para o aeroporto inclui até 4 pessoas com bagagem usual, sem custo adicional. O serviço já está incluído na sua tarifa."
+        "a": "O translado para o aeroporto inclui até 4 pessoas com bagagem padrão, sem custo adicional. O serviço já está incluído na sua tarifa."
       },
       {
         "q": "POSSO CANCELAR MINHA RESERVA?",

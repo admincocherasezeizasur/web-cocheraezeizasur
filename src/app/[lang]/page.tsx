@@ -80,13 +80,13 @@ export default async function LangPage({
       />
       <HeroSection lang={lang as Locale} dict={dict} />
       <AlertBanner messages={dict.notification_bar || []} />
-      <ServiciosSection dict={dict} />
+      <ServiciosSection dict={dict} lang={lang} />
       <ExperienciaSection dict={dict} />
-      <ModalidadesSection dict={dict} />
+      <ModalidadesSection dict={dict} lang={lang} />
       <IdentidadSection dict={dict} />
       <TestimoniosSection dict={dict} />
       <FAQSection dict={dict} />
-      <UbicacionSection dict={dict} />
+      <UbicacionSection dict={dict} lang={lang} />
     </>
   );
 }

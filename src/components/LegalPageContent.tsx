@@ -1,12 +1,6 @@
 import Link from "next/link";
 import { siteConfig } from "@/content/config";
-import { interpolate, pricingVars } from "@/lib/interpolate";
-
-const legalVars: Record<string, string> = {
-  ...pricingVars,
-  email: siteConfig.contact.email,
-  direccion: siteConfig.contact.address,
-};
+import { interpolate, getPricingVars } from "@/lib/interpolate";
 
 interface LegalSection {
   title: string;
@@ -28,6 +22,12 @@ interface Props {
 }
 
 export function LegalPageContent({ dict, lang }: Props) {
+  const legalVars: Record<string, string> = {
+    ...getPricingVars(lang),
+    email: siteConfig.contact.email,
+    direccion: siteConfig.contact[`address_${(lang as "es"|"en"|"pt")}`] || siteConfig.contact.address_es,
+  };
+
   return (
     <>
       {/* ── Header ─────────────────────────────────────────────────────── */}

@@ -61,6 +61,7 @@ interface HeroDict {
 
 interface HeroQuoteFormProps {
   dict: HeroDict;
+  lang: string;
 }
 
 /* ─── Pricing source of truth ─── */
@@ -120,8 +121,9 @@ function calculateBasePrice(days: number, category: VehicleCategory): number {
   return Math.ceil(Math.round(subtotal * multiplier) / 100) * 100;
 }
 
-function formatCurrency(amount: number): string {
-  return `$${amount.toLocaleString("es-AR")}`;
+function formatCurrency(amount: number, lang: string): string {
+  const locale = lang === "en" ? "en-US" : "es-AR";
+  return `$${amount.toLocaleString(locale)} ARS`;
 }
 
 /** "YYYY-MM-DDTHH:MM" → "DD/MM/YYYY - HH:MM hs" */
@@ -141,7 +143,7 @@ function formatDateShort(dt: string): string {
 }
 
 /* ─── Component ─── */
-export function HeroQuoteForm({ dict }: HeroQuoteFormProps) {
+export function HeroQuoteForm({ dict, lang }: HeroQuoteFormProps) {
   const [datetimeIngreso, setDatetimeIngreso] = useState("");
   const [datetimeEgreso, setDatetimeEgreso] = useState("");
   const [airport, setAirport] = useState<AirportType>("ezeiza");
@@ -232,7 +234,7 @@ export function HeroQuoteForm({ dict }: HeroQuoteFormProps) {
       `✈️ *Aeropuerto Salida:* ${airportLabel}\n` +
       `🚗 *Vehículo:* ${vehicleLabel}\n` +
       `🛎️ *Servicio:* ${serviceLabel}\n` +
-      `💰 *Total Cotizado:* ${formatCurrency(quote.total)}\n\n` +
+      `💰 *Total Cotizado:* ${formatCurrency(quote.total, lang)}\n\n` +
       `Aguardan mi confirmación.`;
 
     (window as any).dataLayer = (window as any).dataLayer || [];
@@ -325,12 +327,12 @@ export function HeroQuoteForm({ dict }: HeroQuoteFormProps) {
           <div className="space-y-2 pt-2 border-t border-white/10">
             <div className="flex justify-between items-center">
               <span className="text-sm text-white/60 italic">{dict.result_tarifa_base}</span>
-              <span className="text-sm text-white/80">{formatCurrency(quote.baseTotal)}</span>
+              <span className="text-sm text-white/80">{formatCurrency(quote.baseTotal, lang)}</span>
             </div>
             {serviceType === "valet" && (
               <div className="flex justify-between items-center">
                 <span className="text-sm text-white/60 italic">{dict.result_servicio_valet}</span>
-                <span className="text-sm text-white/80">+{formatCurrency(quote.valetCost)}</span>
+                <span className="text-sm text-white/80">+{formatCurrency(quote.valetCost, lang)}</span>
               </div>
             )}
           </div>
@@ -339,7 +341,7 @@ export function HeroQuoteForm({ dict }: HeroQuoteFormProps) {
           <div className="flex justify-between items-center pt-2 border-t border-white/10">
             <span className="text-sm font-bold text-white uppercase">{dict.result_total}</span>
             <span className="text-3xl font-extrabold text-brand-whatsapp">
-              {formatCurrency(quote.total)}
+              {formatCurrency(quote.total, lang)}
             </span>
           </div>
 
@@ -363,7 +365,7 @@ export function HeroQuoteForm({ dict }: HeroQuoteFormProps) {
           {quote.savings !== null && (
             <p className="text-center text-xs text-amber-400/80 flex items-center justify-center gap-1.5">
               <span>✦</span>
-              {dict.result_ahorro.replace("{savings}", formatCurrency(quote.savings))}
+              {dict.result_ahorro.replace("{savings}", formatCurrency(quote.savings, lang))}
             </p>
           )}
 
@@ -533,7 +535,7 @@ export function HeroQuoteForm({ dict }: HeroQuoteFormProps) {
               {dict.form_valet}
             </span>
             <span className="text-[8px] text-white/30 font-normal normal-case">
-              (+{formatARS(pricingRules.additionalServices.valet_standard)} ARS)
+              (+{formatARS(pricingRules.additionalServices.valet_standard, lang)})
             </span>
           </button>
         </div>
