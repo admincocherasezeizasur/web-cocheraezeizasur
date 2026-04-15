@@ -66,9 +66,9 @@ export function ExperienciaSection({ dict }: { dict: any }) {
                 <div className="absolute inset-0 bg-black/20" />
               </div>
               <div className="p-5">
-                <h4 className="text-sm font-bold text-white tracking-wide mb-1.5">
+                <h3 className="text-sm font-bold text-white tracking-wide mb-1.5">
                   {item.title}
-                </h4>
+                </h3>
                 <p className="text-sm text-[#E7BCBA] leading-relaxed">
                   {item.desc}
                 </p>

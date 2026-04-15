@@ -24,7 +24,7 @@ export async function generateStaticParams() {
   return locales.map((lang) => ({ lang }));
 }
 
-const BASE_URL = "https://www.cocherasezeizasur.com";
+const BASE_URL = "https://cocherasezeizasur.com";
 
 const seoTitles: Record<string, string> = {
   es: "Cocheras Ezeiza Sur | Estacionamiento con Traslado Gratis al Aeropuerto",

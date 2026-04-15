@@ -10,7 +10,7 @@ export function Footer({ dict, lang = "es" }: { dict?: any; lang?: string }) {
           
           {/* Left: Contact Info */}
           <div className="space-y-5">
-            <h2 className="text-[17px] font-black text-brand-red tracking-wide">
+            <h2 className="text-[17px] font-black text-white tracking-wide">
               Cocheras Ezeiza Sur
             </h2>
             <div className="space-y-3">
@@ -54,7 +54,7 @@ export function Footer({ dict, lang = "es" }: { dict?: any; lang?: string }) {
               aria-label="Visitar nuestro Instagram"
               className="w-10 h-10 border border-white/10 flex items-center justify-center hover:border-brand-red transition-all cursor-pointer group"
             >
-              <Icon icon="mdi:instagram" className="w-5 h-5 text-brand-red group-hover:scale-110 transition-transform" />
+              <Icon icon="mdi:instagram" className="w-5 h-5 text-white group-hover:text-brand-red group-hover:scale-110 transition-all" />
             </a>
           </div>
 
