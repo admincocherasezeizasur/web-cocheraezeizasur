@@ -66,7 +66,9 @@ export function ModalidadesSection({ dict, lang }: { dict: any; lang: string }) 
                   src={m.image}
                   alt={m.title}
                   fill
-                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  quality={75}
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
               {/* Content */}

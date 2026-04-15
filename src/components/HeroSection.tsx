@@ -76,7 +76,7 @@ export function HeroSection({ dict, lang }: HeroProps) {
           fill
           className="object-cover"
           priority
-          quality={75}
+          quality={60}
           sizes="100vw"
         />
         {/* Dark overlay */}

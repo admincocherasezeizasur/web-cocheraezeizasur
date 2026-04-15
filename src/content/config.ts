@@ -11,7 +11,7 @@ export const siteConfig = {
     phoneDisplay: "+54 9 11 3827-9812"
   },
   promobanner: {
-    active: false
+    active: true
   },
   whatsappMessages: {
     cruceros: "Hola! Me contacto desde la web, quisiera consultar sobre el servicio de Cruceros / Buquebus.",
@@ -20,9 +20,9 @@ export const siteConfig = {
   // Nav links shown in both desktop navbar and mobile menu.
   // "key" must match a key in dict.nav; "anchor" is the section id.
   navLinks: [
-    { key: "inicio",    anchor: "inicio" },
+    { key: "inicio", anchor: "inicio" },
     { key: "servicios", anchor: "servicios" },
-    { key: "tarifas",   anchor: "tarifas" },
+    { key: "tarifas", anchor: "tarifas" },
     { key: "ubicacion", anchor: "ubicacion" },
   ] as { key: "inicio" | "servicios" | "tarifas" | "ubicacion"; anchor: string }[],
 };
