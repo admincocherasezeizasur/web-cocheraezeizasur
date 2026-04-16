@@ -13,6 +13,10 @@ export const siteConfig = {
   promobanner: {
     active: true
   },
+  valetPromo: {
+    active: true,
+    minDaysForFreeValet: 15
+  },
   whatsappMessages: {
     cruceros: "Hola! Me contacto desde la web, quisiera consultar sobre el servicio de Cruceros / Buquebus.",
     floatingButton: "Hola! Me contacto desde la web. ¿Me pueden dar más información sobre sus servicios?"

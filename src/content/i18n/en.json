@@ -16,8 +16,8 @@
     "feature2_title": "FLEXIBLE\nWAIT\nTIMES.",
     "feature3_title": "24/7 SURVEILLANCE.",
     "cta_quote": "GET A QUOTE",
-    "form_fecha_ingreso": "CHECK-IN DATE & TIME",
-    "form_fecha_egreso": "CHECK-OUT DATE & TIME",
+    "form_fecha_ingreso": "DEPARTURE FLIGHT DATE & TIME",
+    "form_fecha_egreso": "RETURN FLIGHT DATE & TIME",
     "form_nota_hora": "* Important: The time provided must be your flight departure time. Hours are counted from check-in time in 24h blocks.",
     "form_aeropuerto_label": "DEPARTURE & RETURN AIRPORT?",
     "form_aeropuerto_ezeiza": "EZEIZA",
@@ -28,6 +28,8 @@
     "form_tipo_vehiculo_label": "VEHICLE TYPE",
     "form_traslado": "SHUTTLE",
     "form_valet": "VALET PARKING",
+    "form_promo_valet": "Free Valet Parking after 15 days!",
+    "form_gratis": "FREE!",
     "form_cotizar": "GET QUOTE",
     "result_title": "YOUR QUOTE SUMMARY",
     "result_estadia": "STAY",
@@ -43,11 +45,8 @@
     "result_confirmar_whatsapp": "CONFIRM RATE VIA WHATSAPP",
     "result_ahorro": "You save {savings} compared to the official airport rate!",
     "result_whatsapp_msg_prefix": "Hello Cocheras Ezeiza Sur, I would like to request a reservation:",
-    "form_tipo_auto": "Car",
-    "form_tipo_camioneta": "Pickup Truck",
-    "form_tipo_suv": "SUV",
-    "form_tipo_moto": "Motorcycle",
-    "form_tipo_especial": "Special/Large (RAM, RAPTOR, DUCATO, SPRINTER)"
+    "form_tipo_auto": "Car / Medium Pickup Truck / SUV",
+    "form_tipo_especial": "Special / Large (RAM, RAPTOR, DUCATO, SPRINTER)"
   },
   "lang": {
     "es": "ES",

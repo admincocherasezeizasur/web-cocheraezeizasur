@@ -8,7 +8,7 @@ import { formatARS } from "@/lib/interpolate";
 
 /* ─── Types ─── */
 type ServiceType = "traslado" | "valet";
-type VehicleType = "auto" | "camioneta" | "suv" | "moto" | "especial";
+type VehicleType = "auto" | "especial";
 type AirportType = "ezeiza" | "aeroparque" | "eze_aep" | "aep_eze" | "otro";
 type VehicleCategory = "standard" | "special";
 
@@ -36,11 +36,11 @@ interface HeroDict {
   form_tipo_vehiculo_label: string;
   form_tipo_auto?: string;
   form_tipo_camioneta?: string;
-  form_tipo_suv?: string;
-  form_tipo_moto?: string;
   form_tipo_especial?: string;
   form_traslado: string;
   form_valet: string;
+  form_promo_valet?: string;
+  form_gratis?: string;
   form_cotizar: string;
   cta_quote: string;
   result_title: string;
@@ -70,9 +70,6 @@ const { pricingRules } = pricingData;
 /* ─── Vehicle → pricing category ─── */
 const VEHICLE_CATEGORY: Record<VehicleType, VehicleCategory> = {
   auto: "standard",
-  moto: "standard",
-  camioneta: "special",
-  suv: "special",
   especial: "special",
 };
 
@@ -168,6 +165,10 @@ export function HeroQuoteForm({ dict, lang }: HeroQuoteFormProps) {
         valetCost = pricingRules.additionalServices.valet_standard;
       }
       // "otro" → $0, se coordina manualmente
+
+      if (siteConfig.valetPromo.active && days >= siteConfig.valetPromo.minDaysForFreeValet) {
+        valetCost = 0;
+      }
     }
 
     const total = baseTotal + valetCost;
@@ -211,9 +212,6 @@ export function HeroQuoteForm({ dict, lang }: HeroQuoteFormProps) {
 
     const vehicleLabel =
       vehicleType === "auto" ? (dict.form_tipo_auto ?? "Auto") :
-      vehicleType === "camioneta" ? (dict.form_tipo_camioneta ?? "Camioneta") :
-      vehicleType === "suv" ? (dict.form_tipo_suv ?? "SUV") :
-      vehicleType === "moto" ? (dict.form_tipo_moto ?? "Moto") :
       (dict.form_tipo_especial ?? "Especiales/Grande");
 
     const airportLabel =
@@ -294,9 +292,6 @@ export function HeroQuoteForm({ dict, lang }: HeroQuoteFormProps) {
               </p>
               <p className="text-sm font-bold text-white">
                 {vehicleType === "auto" ? (dict.form_tipo_auto ?? "Auto") :
-                 vehicleType === "camioneta" ? (dict.form_tipo_camioneta ?? "Camioneta") :
-                 vehicleType === "suv" ? (dict.form_tipo_suv ?? "SUV") :
-                 vehicleType === "moto" ? (dict.form_tipo_moto ?? "Moto") :
                  (dict.form_tipo_especial ?? "Especial/Grande")}
               </p>
             </div>
@@ -332,7 +327,9 @@ export function HeroQuoteForm({ dict, lang }: HeroQuoteFormProps) {
             {serviceType === "valet" && (
               <div className="flex justify-between items-center">
                 <span className="text-sm text-white/60 italic">{dict.result_servicio_valet}</span>
-                <span className="text-sm text-white/80">+{formatCurrency(quote.valetCost, lang)}</span>
+                <span className={`text-sm ${quote.valetCost === 0 ? "text-brand-whatsapp font-bold" : "text-white/80"}`}>
+                  {quote.valetCost === 0 ? (dict.form_gratis ?? "¡GRATIS!") : `+${formatCurrency(quote.valetCost, lang)}`}
+                </span>
               </div>
             )}
           </div>
@@ -383,7 +380,14 @@ export function HeroQuoteForm({ dict, lang }: HeroQuoteFormProps) {
 
   /* ─── Form View ─── */
   return (
-    <div className="w-full max-w-md bg-brand-card/90 backdrop-blur-lg border border-brand-red/20 rounded-2xl overflow-hidden shadow-[0_0_35px_rgba(217,4,41,0.3)] hover:shadow-[0_0_60px_rgba(217,4,41,0.5)] transition-shadow duration-500 group">
+    <div className="relative">
+      {/* Etiqueta Promo Valet Parking */}
+      {siteConfig.valetPromo.active && dict.form_promo_valet && (
+        <div className="absolute -top-3 -right-2 md:-right-4 z-20 bg-brand-red text-white text-[10px] sm:text-[11px] font-bold uppercase py-1.5 px-3.5 rounded-full shadow-[0_0_20px_rgba(217,4,41,0.6)] animate-pulse-slow border border-white/20 whitespace-nowrap">
+          {dict.form_promo_valet}
+        </div>
+      )}
+      <div className="w-full max-w-md bg-brand-card/90 backdrop-blur-lg border border-brand-red/20 rounded-2xl overflow-hidden shadow-[0_0_35px_rgba(217,4,41,0.3)] hover:shadow-[0_0_60px_rgba(217,4,41,0.5)] transition-shadow duration-500 group">
       {/* Header */}
       <div className="px-7 pt-7 pb-5">
         <div className="flex items-center justify-between">
@@ -484,9 +488,6 @@ export function HeroQuoteForm({ dict, lang }: HeroQuoteFormProps) {
             className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-2.5 text-sm text-white/80 outline-none focus:border-brand-red/50 transition-colors appearance-none cursor-pointer [color-scheme:dark]"
           >
             <option value="auto" className="bg-brand-card text-white">{dict.form_tipo_auto ?? "Auto"}</option>
-            <option value="camioneta" className="bg-brand-card text-white">{dict.form_tipo_camioneta ?? "Camioneta"}</option>
-            <option value="suv" className="bg-brand-card text-white">{dict.form_tipo_suv ?? "SUV"}</option>
-            <option value="moto" className="bg-brand-card text-white">{dict.form_tipo_moto ?? "Moto"}</option>
             <option value="especial" className="bg-brand-card text-white">
               {dict.form_tipo_especial ?? "Especiales/Grande (RAM, RAPTOR, DUCATO, SPRINTER)"}
             </option>
@@ -534,8 +535,10 @@ export function HeroQuoteForm({ dict, lang }: HeroQuoteFormProps) {
               />
               {dict.form_valet}
             </span>
-            <span className="text-[8px] text-white/30 font-normal normal-case">
-              (+{formatARS(pricingRules.additionalServices.valet_standard, lang)})
+            <span className={`text-[8px] font-normal normal-case ${quote && siteConfig.valetPromo.active && quote.days >= siteConfig.valetPromo.minDaysForFreeValet ? "text-brand-whatsapp font-bold" : "text-white/30"}`}>
+              {quote && siteConfig.valetPromo.active && quote.days >= siteConfig.valetPromo.minDaysForFreeValet
+                ? (dict.form_gratis ?? "¡GRATIS!")
+                : `(+${formatARS(pricingRules.additionalServices.valet_standard, lang)})`}
             </span>
           </button>
         </div>
@@ -549,6 +552,7 @@ export function HeroQuoteForm({ dict, lang }: HeroQuoteFormProps) {
           {dict.form_cotizar}
         </button>
       </div>
+    </div>
     </div>
   );
 }

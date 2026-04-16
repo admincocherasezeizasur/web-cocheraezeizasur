@@ -16,8 +16,8 @@
     "feature2_title": "TIEMPOS DE\nESPERA\nFLEXIBLES.",
     "feature3_title": "VIGILANCIA 24HS.",
     "cta_quote": "COTIZÁ TU ESTADÍA",
-    "form_fecha_ingreso": "FECHA Y HORA DE INGRESO",
-    "form_fecha_egreso": "FECHA Y HORA DE EGRESO",
+    "form_fecha_ingreso": "FECHA Y HORA DEL AÉREO DE IDA",
+    "form_fecha_egreso": "FECHA Y HORA DEL AÉREO DE REGRESO",
     "form_nota_hora": "* Importante: La hora informada debe ser la hora de salida de su vuelo. Horarios se contabilizan desde el horario de ingreso en bloques de 24hs.",
     "form_aeropuerto_label": "¿AEROPUERTO DE SALIDA Y REGRESO?",
     "form_aeropuerto_ezeiza": "EZEIZA",
@@ -28,6 +28,8 @@
     "form_tipo_vehiculo_label": "TIPO DE VEHÍCULO",
     "form_traslado": "TRASLADO",
     "form_valet": "VALET PARKING",
+    "form_promo_valet": "¡Después de los 15 días Valet Parking Gratis!",
+    "form_gratis": "¡GRATIS!",
     "form_cotizar": "COTIZAR",
     "result_title": "RESUMEN DE TU COTIZACIÓN",
     "result_estadia": "ESTADÍA",
@@ -43,11 +45,8 @@
     "result_confirmar_whatsapp": "CONFIRMAR TARIFA POR WHATSAPP",
     "result_ahorro": "¡Te ahorrás {savings} vs. la tarifa oficial del aeropuerto!",
     "result_whatsapp_msg_prefix": "Hola Cocheras Ezeiza Sur, quiero solicitar una reserva:",
-    "form_tipo_auto": "Auto",
-    "form_tipo_camioneta": "Camioneta",
-    "form_tipo_suv": "SUV",
-    "form_tipo_moto": "Moto",
-    "form_tipo_especial": "Especiales/Grande (RAM, RAPTOR, DUCATO, SPRINTER)"
+    "form_tipo_auto": "Auto / Camioneta Mediana / SUV",
+    "form_tipo_especial": "Especiales / Grandes (RAM, RAPTOR, DUCATO, SPRINTER)"
   },
   "lang": {
     "es": "ES",

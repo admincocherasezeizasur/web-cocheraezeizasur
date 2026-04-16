@@ -27,7 +27,7 @@ Object.assign(en.hero, {
 });
 Object.assign(pt.hero, {
   form_tipo_auto: "Carro",
-  form_tipo_camioneta: "Caminhonete",
+  form_tipo_camioneta: "Caminhonete Média",
   form_tipo_suv: "SUV",
   form_tipo_moto: "Moto",
   form_tipo_especial: "Especial/Grande"
