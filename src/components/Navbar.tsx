@@ -51,6 +51,7 @@ export function Navbar({ lang, dict }: NavbarProps) {
               src="/images/logo-cocheras-ezeiza-sur.webp"
               alt="Cocheras Ezeiza Sur"
               fill
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="object-contain"
               priority
             />
@@ -116,6 +117,7 @@ export function Navbar({ lang, dict }: NavbarProps) {
                   src="/images/logo-cocheras-ezeiza-sur.webp"
                   alt="Cocheras Ezeiza Sur"
                   fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-contain"
                 />
               </div>

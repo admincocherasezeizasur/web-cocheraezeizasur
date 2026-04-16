@@ -14,6 +14,7 @@ export function UbicacionSection({ dict, lang = "es" }: { dict: any; lang?: stri
               src="/images/location_external_img_cocheras_eseiza_sur_left_context_image.webp"
               alt="Cocheras Ezeiza Sur - Fachada"
               fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover transition-transform duration-700 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
@@ -25,6 +26,7 @@ export function UbicacionSection({ dict, lang = "es" }: { dict: any; lang?: stri
               src="/images/map_location_img.webp"
               alt="Mapa de ubicación - Venezuela 424, Ezeiza"
               fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
             />
             {/* Address card overlay */}
