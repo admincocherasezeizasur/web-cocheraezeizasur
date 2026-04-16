@@ -79,7 +79,7 @@ export async function generateMetadata({
       locale: ogLocales[lang] ?? "es_AR",
       images: [
         {
-          url: "/images/Hero-Image-Background.webp",
+          url: "/images/bg_cocheras_ezeiza_sur.jpeg",
           width: 1200,
           height: 630,
           alt: "Cocheras Ezeiza Sur — Estacionamiento techado cerca del Aeropuerto de Ezeiza",
@@ -90,7 +90,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title,
       description,
-      images: ["/images/Hero-Image-Background.webp"],
+      images: ["/images/bg_cocheras_ezeiza_sur.jpeg"],
     },
   };
 }

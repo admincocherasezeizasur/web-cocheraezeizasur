@@ -1,0 +1,4 @@
+# Cloudflare Pages redirect rules.
+# Redirects the root path to the default language (Spanish) at the CDN level,
+# so no JavaScript needs to run for this redirect.
+/  /es  302

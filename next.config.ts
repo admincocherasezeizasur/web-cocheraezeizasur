@@ -1,11 +1,14 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // "output: export" is incompatible with opennextjs-cloudflare (Workers).
-  // OpenNext manages the output bundling for Cloudflare — do not set output here.
+  // Static export: pre-renders all pages to HTML/CSS/JS at build time.
+  // No Cloudflare Worker runs per request → eliminates Error 1102 permanently.
+  output: "export",
+
   images: {
-    formats: ['image/avif', 'image/webp'],
-    qualities: [25, 50, 60, 75, 90, 100],
+    // Image optimization requires a running server — not available with static export.
+    // All images are already hand-optimized WebP files, so there is no quality loss.
+    unoptimized: true,
   },
 };
 

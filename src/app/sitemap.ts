@@ -1,6 +1,8 @@
 import type { MetadataRoute } from "next";
 import { locales } from "./[lang]/dictionaries";
 
+export const dynamic = "force-static";
+
 const BASE_URL = "https://www.cocherasezeizasur.com";
 
 const routes = [
