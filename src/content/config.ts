@@ -11,7 +11,16 @@ export const siteConfig = {
     phoneDisplay: "+54 9 11 3827-9812"
   },
   promobanner: {
-    active: true
+    active: false
+  },
+  global_promo: {
+    active: false,
+    applies_to: {
+      ezeiza: true,
+      eze_aep: true,
+      aep_eze: true,
+    },
+    discount: 0, // e.g., 0.4 = 40% off
   },
   valetPromo: {
     active: true,

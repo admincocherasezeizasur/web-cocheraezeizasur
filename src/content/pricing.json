@@ -43,7 +43,8 @@
     },
     "additionalServices": {
       "valet_standard": 20000,
-      "valet_combinado": 90000
+      "valet_combinado": 90000,
+      "traslado_combinado": 90000
     }
   }
 }
