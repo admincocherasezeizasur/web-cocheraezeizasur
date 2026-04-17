@@ -1,24 +1,10 @@
 import type { Metadata } from "next";
-import "../globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { getDictionary, hasLocale, locales, type Locale } from "./dictionaries";
 import { notFound } from "next/navigation";
-import { Inter, Space_Grotesk } from "next/font/google";
 import { GoogleTagManager } from '@next/third-parties/google';
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
-});
-
-const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin"],
-  variable: "--font-space-grotesk",
-  display: "swap",
-});
 
 export async function generateStaticParams() {
   return locales.map((lang) => ({ lang }));
@@ -109,14 +95,12 @@ export default async function LangLayout({
   const dict = await getDictionary(lang as Locale);
 
   return (
-    <html lang={lang} className={`${inter.variable} ${spaceGrotesk.variable}`} suppressHydrationWarning>
-      <body className="min-h-screen flex flex-col" suppressHydrationWarning>
-        <GoogleTagManager gtmId="GTM-W5GNTWWG" />
-        <Navbar lang={lang as Locale} dict={dict} />
-        <main className="flex-1">{children}</main>
-        <Footer dict={dict} lang={lang} />
-        <WhatsAppFloat />
-      </body>
-    </html>
+    <>
+      <GoogleTagManager gtmId="GTM-W5GNTWWG" />
+      <Navbar lang={lang as Locale} dict={dict} />
+      <main className="flex-1">{children}</main>
+      <Footer dict={dict} lang={lang} />
+      <WhatsAppFloat />
+    </>
   );
 }

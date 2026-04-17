@@ -9,7 +9,7 @@ import { formatARS } from "@/lib/interpolate";
 /* ─── Types ─── */
 type ServiceType = "traslado" | "valet";
 type VehicleType = "auto" | "especial";
-type AirportType = "ezeiza" | "aeroparque" | "eze_aep" | "aep_eze" | "otro";
+type AirportType = "ezeiza" | "eze_aep" | "aep_eze";
 type VehicleCategory = "standard" | "special";
 
 interface PricingRange {
@@ -159,12 +159,11 @@ export function HeroQuoteForm({ dict, lang }: HeroQuoteFormProps) {
 
     let valetCost = 0;
     if (serviceType === "valet") {
-      if (airport === "eze_aep" || airport === "aep_eze") {
-        valetCost = pricingRules.additionalServices.valet_combinado;
-      } else if (airport === "ezeiza" || airport === "aeroparque") {
+      if (airport === "ezeiza") {
         valetCost = pricingRules.additionalServices.valet_standard;
+      } else if (airport === "eze_aep" || airport === "aep_eze") {
+        valetCost = pricingRules.additionalServices.valet_combinado;
       }
-      // "otro" → $0, se coordina manualmente
 
       if (siteConfig.valetPromo.active && days >= siteConfig.valetPromo.minDaysForFreeValet) {
         valetCost = 0;
@@ -173,13 +172,10 @@ export function HeroQuoteForm({ dict, lang }: HeroQuoteFormProps) {
 
     const total = baseTotal + valetCost;
 
-    // Savings solo tiene sentido cuando comparamos contra una tarifa oficial concreta
+    // Savings solo tiene sentido cuando comparamos contra la tarifa oficial de Ezeiza
     let savings: number | null = null;
-    if (airport === "ezeiza" || airport === "aeroparque") {
-      const officialRate =
-        airport === "ezeiza"
-          ? pricingRules.officialAirportRates.ezeiza_por_dia
-          : pricingRules.officialAirportRates.aeroparque_por_dia;
+    if (airport === "ezeiza") {
+      const officialRate = pricingRules.officialAirportRates.ezeiza_por_dia;
       const diff = days * officialRate - total;
       if (diff > 0) savings = diff;
     }
@@ -215,14 +211,22 @@ export function HeroQuoteForm({ dict, lang }: HeroQuoteFormProps) {
       (dict.form_tipo_especial ?? "Especiales/Grande");
 
     const airportLabel =
-      airport === "ezeiza" ? (dict.form_aeropuerto_ezeiza ?? "Ezeiza") :
-      airport === "aeroparque" ? (dict.form_aeropuerto_aeroparque ?? "Aeroparque") :
+      airport === "ezeiza" ? (dict.form_aeropuerto_ezeiza ?? "EZEIZA") :
       airport === "eze_aep" ? (dict.form_aeropuerto_eze_aep ?? "EZE → AEP") :
-      airport === "aep_eze" ? (dict.form_aeropuerto_aep_eze ?? "AEP → EZE") :
-      (dict.form_aeropuerto_otro ?? "Otra combinación");
+      (dict.form_aeropuerto_aep_eze ?? "AEP → EZE");
+
+    const valetLineLabel =
+      airport === "ezeiza"
+        ? (dict.result_servicio_valet ?? "Servicio Valet (EZE)")
+        : `Servicio Valet (${airportLabel})`;
 
     const serviceLabel =
       serviceType === "traslado" ? dict.result_traslado_desc : dict.result_valet_desc;
+
+    const valetLine = serviceType === "valet"
+      ? `   ↳ ${dict.result_tarifa_base}: ${formatCurrency(quote.baseTotal, lang)}\n` +
+        `   ↳ ${valetLineLabel}: ${quote.valetCost === 0 ? (dict.form_gratis ?? "¡GRATIS!") : `+${formatCurrency(quote.valetCost, lang)}`}\n`
+      : "";
 
     const message =
       `${dict.result_whatsapp_msg_prefix}\n` +
@@ -232,6 +236,7 @@ export function HeroQuoteForm({ dict, lang }: HeroQuoteFormProps) {
       `✈️ *Aeropuerto Salida:* ${airportLabel}\n` +
       `🚗 *Vehículo:* ${vehicleLabel}\n` +
       `🛎️ *Servicio:* ${serviceLabel}\n` +
+      valetLine +
       `💰 *Total Cotizado:* ${formatCurrency(quote.total, lang)}\n\n` +
       `Aguardan mi confirmación.`;
 
@@ -326,7 +331,7 @@ export function HeroQuoteForm({ dict, lang }: HeroQuoteFormProps) {
             </div>
             {serviceType === "valet" && (
               <div className="flex justify-between items-center">
-                <span className="text-sm text-white/60 italic">{dict.result_servicio_valet}</span>
+                <span className="text-sm text-white/60 italic">{airport === "ezeiza" ? (dict.result_servicio_valet ?? "Servicio Valet (EZE)") : `Servicio Valet (${airport === "eze_aep" ? (dict.form_aeropuerto_eze_aep ?? "EZE → AEP") : (dict.form_aeropuerto_aep_eze ?? "AEP → EZE")})`}</span>
                 <span className={`text-sm ${quote.valetCost === 0 ? "text-brand-whatsapp font-bold" : "text-white/80"}`}>
                   {quote.valetCost === 0 ? (dict.form_gratis ?? "¡GRATIS!") : `+${formatCurrency(quote.valetCost, lang)}`}
                 </span>
@@ -459,19 +464,13 @@ export function HeroQuoteForm({ dict, lang }: HeroQuoteFormProps) {
             className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-2.5 text-sm text-white/80 outline-none focus:border-brand-red/50 transition-colors appearance-none cursor-pointer [color-scheme:dark]"
           >
             <option value="ezeiza" className="bg-brand-card text-white">
-              {dict.form_aeropuerto_ezeiza ?? "Ezeiza"}
-            </option>
-            <option value="aeroparque" className="bg-brand-card text-white">
-              {dict.form_aeropuerto_aeroparque ?? "Aeroparque"}
+              {dict.form_aeropuerto_ezeiza ?? "EZEIZA"}
             </option>
             <option value="eze_aep" className="bg-brand-card text-white">
               {dict.form_aeropuerto_eze_aep ?? "EZE → AEP (Valet Combinado)"}
             </option>
             <option value="aep_eze" className="bg-brand-card text-white">
               {dict.form_aeropuerto_aep_eze ?? "AEP → EZE (Valet Combinado)"}
-            </option>
-            <option value="otro" className="bg-brand-card text-white">
-              {dict.form_aeropuerto_otro ?? "Otra combinación"}
             </option>
           </select>
         </div>
@@ -538,7 +537,7 @@ export function HeroQuoteForm({ dict, lang }: HeroQuoteFormProps) {
             <span className={`text-[8px] font-normal normal-case ${quote && siteConfig.valetPromo.active && quote.days >= siteConfig.valetPromo.minDaysForFreeValet ? "text-brand-whatsapp font-bold" : "text-white/30"}`}>
               {quote && siteConfig.valetPromo.active && quote.days >= siteConfig.valetPromo.minDaysForFreeValet
                 ? (dict.form_gratis ?? "¡GRATIS!")
-                : `(+${formatARS(pricingRules.additionalServices.valet_standard, lang)})`}
+                : `(+${formatARS(airport === "ezeiza" ? pricingRules.additionalServices.valet_standard : pricingRules.additionalServices.valet_combinado, lang)})`}
             </span>
           </button>
         </div>
