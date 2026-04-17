@@ -113,10 +113,10 @@ function calculateBasePrice(days: number, category: VehicleCategory): number {
   }
 
   const multiplier = pricingRules.vehicleTypes[category].multiplier;
-  // Math.round() elimina el epsilon de float64 antes del ceil
-  // (ej: 190000 × 1.1 = 209000.0000001687 en binario → redondea a 209000)
-  return Math.ceil(Math.round(subtotal * multiplier) / 100) * 100;
+  // Math.round() elimina el epsilon de float64 (ej: 190000 × 1.1 = 209000.0000001687 → 209000)
+  return Math.round(subtotal * multiplier);
 }
+
 
 function formatCurrency(amount: number, lang: string): string {
   const locale = lang === "en" ? "en-US" : "es-AR";
@@ -232,7 +232,7 @@ export function HeroQuoteForm({ dict, lang }: HeroQuoteFormProps) {
       `${dict.result_whatsapp_msg_prefix}\n` +
       `📅 *Ingreso:* ${formatDatetimeLong(datetimeIngreso)}\n` +
       `📅 *Egreso:* ${formatDatetimeLong(datetimeEgreso)}\n` +
-      `⏳ *Estadía:* ${quote.days} días\n` +
+      `📆 *Días Totales:* ${quote.days} día${quote.days !== 1 ? "s" : ""}\n` +
       `✈️ *Aeropuerto Salida:* ${airportLabel}\n` +
       `🚗 *Vehículo:* ${vehicleLabel}\n` +
       `🛎️ *Servicio:* ${serviceLabel}\n` +
@@ -325,6 +325,10 @@ export function HeroQuoteForm({ dict, lang }: HeroQuoteFormProps) {
 
           {/* Tarifa breakdown */}
           <div className="space-y-2 pt-2 border-t border-white/10">
+            <div className="flex justify-between items-center">
+              <span className="text-sm text-white/60 italic">Días Totales</span>
+              <span className="text-sm font-bold text-brand-whatsapp">{quote.days} día{quote.days !== 1 ? "s" : ""}</span>
+            </div>
             <div className="flex justify-between items-center">
               <span className="text-sm text-white/60 italic">{dict.result_tarifa_base}</span>
               <span className="text-sm text-white/80">{formatCurrency(quote.baseTotal, lang)}</span>
