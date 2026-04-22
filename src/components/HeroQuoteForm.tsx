@@ -274,7 +274,7 @@ export function HeroQuoteForm({ dict, lang }: HeroQuoteFormProps) {
       combinadoLine +
       promoLine +
       `💰 *Total Cotizado:* ${formatCurrency(quote.total, lang)}\n\n` +
-      `Aguardan mi confirmación.`;
+      `Aguardo mi confirmación.`;
 
     (window as any).dataLayer = (window as any).dataLayer || [];
     (window as any).dataLayer.push({
