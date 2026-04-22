@@ -2,8 +2,15 @@
   "pricingRules": {
     "ranges": [
       {
-        "id": "1_to_10",
+        "id": "1_to_5",
         "minDays": 1,
+        "maxDays": 5,
+        "calculationType": "fixed_total",
+        "fixedTotal": 95000
+      },
+      {
+        "id": "6_to_10",
+        "minDays": 6,
         "maxDays": 10,
         "calculationType": "flat_rate",
         "rate": 19000

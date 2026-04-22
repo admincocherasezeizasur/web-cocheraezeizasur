@@ -16,11 +16,12 @@ interface PricingRange {
   id: string;
   minDays: number;
   maxDays: number;
-  calculationType: "flat_rate" | "base_plus_extra";
+  calculationType: "flat_rate" | "base_plus_extra" | "fixed_total";
   rate?: number;
   accumulatedBasePrice?: number;
   baseDaysIncluded?: number;
   extraRatePerDay?: number;
+  fixedTotal?: number;
 }
 
 interface HeroDict {
@@ -108,6 +109,8 @@ function calculateBasePrice(days: number, category: VehicleCategory): number {
   let subtotal: number;
   if (range.calculationType === "flat_rate") {
     subtotal = days * (range.rate ?? 0);
+  } else if (range.calculationType === "fixed_total") {
+    subtotal = range.fixedTotal ?? 0;
   } else {
     subtotal =
       (range.accumulatedBasePrice ?? 0) +

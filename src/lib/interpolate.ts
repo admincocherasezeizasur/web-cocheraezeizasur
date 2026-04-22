@@ -32,6 +32,6 @@ export function getPricingVars(lang: string = "es"): Record<string, string> {
   return {
     valet_standard: formatARS(pricingRules.additionalServices.valet_standard, lang),
     valet_combinado: formatARS(pricingRules.additionalServices.valet_combinado, lang),
-    tarifa_base: formatARS(pricingRules.ranges[0].rate!, lang),
+    tarifa_base: formatARS((pricingRules.ranges as any[]).find(r => r.rate)?.rate ?? 19000, lang),
   };
 }
