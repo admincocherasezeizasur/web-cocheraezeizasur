@@ -6,14 +6,14 @@
         "minDays": 1,
         "maxDays": 5,
         "calculationType": "fixed_total",
-        "fixedTotal": 95000
+        "fixedTotal": 87500
       },
       {
         "id": "6_to_10",
         "minDays": 6,
         "maxDays": 10,
         "calculationType": "flat_rate",
-        "rate": 19000
+        "rate": 17500
       },
       {
         "id": "11_to_14",
@@ -22,14 +22,14 @@
         "calculationType": "base_plus_extra",
         "accumulatedBasePrice": 175000,
         "baseDaysIncluded": 10,
-        "extraRatePerDay": 17500
+        "extraRatePerDay": 16000
       },
       {
         "id": "15_plus",
         "minDays": 15,
         "maxDays": 999,
         "calculationType": "base_plus_extra",
-        "accumulatedBasePrice": 245000,
+        "accumulatedBasePrice": 224000,
         "baseDaysIncluded": 14,
         "extraRatePerDay": 6000
       }
