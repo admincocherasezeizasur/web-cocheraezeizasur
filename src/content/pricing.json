@@ -20,7 +20,7 @@
         "minDays": 11,
         "maxDays": 14,
         "calculationType": "base_plus_extra",
-        "accumulatedBasePrice": 175000,
+        "accumulatedBasePrice": 160000,
         "baseDaysIncluded": 10,
         "extraRatePerDay": 16000
       },
