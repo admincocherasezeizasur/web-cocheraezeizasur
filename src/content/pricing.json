@@ -6,32 +6,32 @@
         "minDays": 1,
         "maxDays": 5,
         "calculationType": "fixed_total",
-        "fixedTotal": 87500
+        "fixedTotal": 80000
       },
       {
         "id": "6_to_10",
         "minDays": 6,
         "maxDays": 10,
         "calculationType": "flat_rate",
-        "rate": 17500
+        "rate": 16000
       },
       {
         "id": "11_to_14",
         "minDays": 11,
-        "maxDays": 14,
+        "maxDays": 15,
         "calculationType": "base_plus_extra",
         "accumulatedBasePrice": 160000,
         "baseDaysIncluded": 10,
-        "extraRatePerDay": 16000
+        "extraRatePerDay": 10000
       },
       {
         "id": "15_plus",
-        "minDays": 15,
+        "minDays": 16,
         "maxDays": 999,
         "calculationType": "base_plus_extra",
         "accumulatedBasePrice": 224000,
         "baseDaysIncluded": 14,
-        "extraRatePerDay": 6000
+        "extraRatePerDay": 5000
       }
     ],
     "vehicleTypes": {
