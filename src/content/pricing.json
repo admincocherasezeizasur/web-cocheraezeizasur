@@ -6,31 +6,31 @@
         "minDays": 1,
         "maxDays": 5,
         "calculationType": "fixed_total",
-        "fixedTotal": 80000
+        "fixedTotal": 85000
       },
       {
         "id": "6_to_10",
         "minDays": 6,
         "maxDays": 10,
         "calculationType": "flat_rate",
-        "rate": 16000
+        "rate": 17000
       },
       {
-        "id": "11_to_15",
+        "id": "11_to_20",
         "minDays": 11,
-        "maxDays": 15,
+        "maxDays": 20,
         "calculationType": "base_plus_extra",
-        "accumulatedBasePrice": 160000,
+        "accumulatedBasePrice": 170000,
         "baseDaysIncluded": 10,
         "extraRatePerDay": 10000
       },
       {
-        "id": "16_plus",
-        "minDays": 16,
+        "id": "21_plus",
+        "minDays": 21,
         "maxDays": 999,
         "calculationType": "base_plus_extra",
-        "accumulatedBasePrice": 210000,
-        "baseDaysIncluded": 14,
+        "accumulatedBasePrice": 270000,
+        "baseDaysIncluded": 20,
         "extraRatePerDay": 5000
       }
     ],
@@ -50,8 +50,8 @@
     },
     "additionalServices": {
       "valet_standard": 20000,
-      "valet_combinado": 70000,
-      "traslado_combinado": 70000
+      "valet_combinado": 80000,
+      "traslado_combinado": 80000
     }
   }
 }
